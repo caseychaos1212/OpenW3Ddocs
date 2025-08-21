@@ -21,13 +21,14 @@ Because of this some of the information may be diffrent for SAGE games especiall
 
 References
 ----------
-* 
+
 * `w3d2ply/w3d_file.h <https://github.com/mikolalysenko/w3d2ply/blob/ecd8302b6cfd0578ab249cb95c8b70636c4609bc/w3d_file.h>`_
 * `libw3d/types.hpp <https://github.com/feliwir/libw3d/blob/fb547b28c91f17070d65ba24edf7a5294a0554d9/include/libw3d/types.hpp>`_
 * `OpenW3D/w3d_file.h <https://github.com/w3dhub/OpenW3D/blob/main/Code/ww3d2/w3d_file.h>`_
 * `max2w3d/scripts <https://github.com/w3dhub/max2w3d/blob/master/scripts/w3d.h>`_  
-* `GeneralsMD/w3d_file.h <https://github.com/electronicarts/CnC_Generals_Zero_Hour/blob/main/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/w3d_file.h`_
+* `GeneralsMD/w3d_file.h <https://github.com/electronicarts/CnC_Generals_Zero_Hour/blob/main/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/w3d_file.h>`_
 * `therealKyp/Earth-and-Beyond-server <https://github.com/therealKyp/Earth-and-Beyond-server/tree/master/trunk/Net7Tools/W3D%20Parser>`_
+
 Specification
 -------------
 
@@ -543,9 +544,9 @@ Offset  Bytes  Type             Name
 64      4      UINT32           FutureCounts
 68      4      UINT32           VertexChannels
 72      4      UINT32           FaceChannels
-76      12    `W3D_VECTOR3`_    BoundingBoxMin
-88      12    `W3D_VECTOR3`_    BoundingBoxMax
-100     12    `W3D_VECTOR3`_    BoundingSphereCenter
+76      12     `W3D_VECTOR3`_   BoundingBoxMin
+88      12     `W3D_VECTOR3`_   BoundingBoxMax
+100     12     `W3D_VECTOR3`_   BoundingSphereCenter
 112     4      FLOAT32          BoundingSphereRadius
 ======  =====  ===============  ====================
 
@@ -647,11 +648,11 @@ W3D_CHUNK_VERTEX_NORMALS
 
 Array of normals.
 
-======  ======  ================  ====================
-Offset  Bytes   Type              Name
-======  ======  ================  ====================
-0       12 * N  `W3D_VECTOR3`_[N] Normals
-======  ======  ================  ====================
+======  ======  =================  ====================
+Offset  Bytes   Type                Name
+======  ======  =================  ====================
+0       12 * N  `W3D_VECTOR3`_[N]   Normals
+======  ======  =================  ====================
 
 ``N`` is the number of vertices specified in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
 
@@ -692,7 +693,7 @@ WWSKIN only allows 1 bone per vertex.
 **TODO**: Does BFME have a second bone index, and bone weights?
 
 TT_W3D_VERTEX_INFLUENCE
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 TT: Added Max Skin Support which now allows two bone weights
 
@@ -721,7 +722,7 @@ Offset  Bytes  Type            Name
 ======  =====  ==============  ====================
 0       12     UINT32[3]       VertexIndex
 12      4      UINT32          SurfaceType
-16      12    `W3D_VECTOR3`_   Normal
+16      12     `W3D_VECTOR3`_  Normal
 28      4      FLOAT32         Distance
 ======  =====  ==============  ====================
 
@@ -860,7 +861,7 @@ Offset  Bytes  Type         Name
 * **TextureCount**: How many textures are used
 
 W3D_CHUNK_SHADERS
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Container chunk for an array of `W3D_SHADER`_ structures.
 The number of shaders is contained in the **ShaderCount** field in the `W3D_CHUNK_MATERIAL_INFO`_ chunk.
@@ -1089,10 +1090,10 @@ Vertex material info.
 Offset  Bytes   Type          Name
 ======  ======  ============  ====================
 0       4       UINT32        MaterialFlags
-4       4      `W3D_RGB`_     Ambient
-8       4      `W3D_RGB`_     Diffuse
-12      4      `W3D_RGB`_     Specular
-16      4      `W3D_RGB`_     Emissive
+4       4       `W3D_RGB`_    Ambient
+8       4       `W3D_RGB`_    Diffuse
+12      4       `W3D_RGB`_    Specular
+16      4       `W3D_RGB`_    Emissive
 20      4       FLOAT32       Shininess
 20      4       FLOAT32       Opacity
 20      4       FLOAT32       Translucency
@@ -1108,7 +1109,7 @@ Offset  Bytes   Type          Name
 * **Translucency**: How much light passes through the material. (default = 0).
 
 W3D_VERTEX_MATERIAL_FLAGS
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ==========  ==========================================  ==============
 Value       Name                                        Description
@@ -1169,7 +1170,7 @@ Value       Name                                        Description
 0x3000000   W3DVERTMAT_PSX_TRANS_25 
 0x4000000   W3DVERTMAT_PSX_TRANS_MINUS_100 
 0x8000000   W3DVERTMAT_PSX_NO_RT_LIGHTING
-==========  ==========================  ==============
+==========  ==========================================  ==============
 
 W3D_CHUNK_VERTEX_MAPPER_ARGS0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1267,34 +1268,34 @@ Offset  Bytes   Type          Name
 W3D_TEXTURE_FLAGS
 ~~~~~~~~~~~~~~~~~~~
 
-==========  ==========================  ==============
-Value       Name                        Description
-==========  ==========================  ==============
-0x1         W3DTEXTURE_PUBLISH          this texture should be "published" (indirected so its changeable in code)
-0x2         W3DTEXTURE_RESIZE_OBSOLETE  this texture should be resizeable (OBSOLETE!!!)
-0x4         W3DTEXTURE_NO_LOD           this texture should not have any LOD (mipmapping or resizing)
-0x8         W3DTEXTURE_CLAMP_U          this texture should be clamped on U
-0x10        W3DTEXTURE_CLAMP_V          this texture should be clamped on V
-0x20        W3DTEXTURE_ALPHA_BITMAP     this texture's alpha channel should be collapsed to one bit
+==========  ===========================  ==============
+Value       Name                          Description
+==========  ===========================  ==============
+0x1         W3DTEXTURE_PUBLISH            this texture should be "published" (indirected so its changeable in code)
+0x2         W3DTEXTURE_RESIZE_OBSOLETE    this texture should be resizeable (OBSOLETE!!!)
+0x4         W3DTEXTURE_NO_LOD             this texture should not have any LOD (mipmapping or resizing)
+0x8         W3DTEXTURE_CLAMP_U            this texture should be clamped on U
+0x10        W3DTEXTURE_CLAMP_V            this texture should be clamped on V
+0x20        W3DTEXTURE_ALPHA_BITMAP       this texture's alpha channel should be collapsed to one bit
                                         
 0xc0        W3DTEXTURE_MIP_LEVELS_MASK  
-0x0         W3DTEXTURE_MIP_LEVELS_ALL   generate all mip-level
-0x40        W3DTEXTURE_MIP_LEVELS_2     generate up to 2 mip-levels (NOTE: use W3DTEXTURE_NO_LOD to generate just 1 mip-level)
-0x80        W3DTEXTURE_MIP_LEVELS_3     generate up to 3 mip-levels
-0xc0        W3DTEXTURE_MIP_LEVELS_4     generate up to 4 mip-levels
-                                        Hints to describe the intended use of the various passes / stages
-8           W3DTEXTURE_HINT_SHIFT       number of bits to shift up
-0xff00      W3DTEXTURE_HINT_MASK        mask for shifted hint value
+0x0         W3DTEXTURE_MIP_LEVELS_ALL     generate all mip-level
+0x40        W3DTEXTURE_MIP_LEVELS_2       generate up to 2 mip-levels (NOTE: use W3DTEXTURE_NO_LOD to generate just 1 mip-level)
+0x80        W3DTEXTURE_MIP_LEVELS_3       generate up to 3 mip-levels
+0xc0        W3DTEXTURE_MIP_LEVELS_4       generate up to 4 mip-levels
+                                          Hints to describe the intended use of the various passes / stages
+8           W3DTEXTURE_HINT_SHIFT         number of bits to shift up
+0xff00      W3DTEXTURE_HINT_MASK          mask for shifted hint value
 
-0x0         W3DTEXTURE_HINT_BASE        base texture
-0x100       W3DTEXTURE_HINT_EMISSIVE    emissive map
-0x200       W3DTEXTURE_HINT_ENVIRONMENT environment/reflection map
-0x300       W3DTEXTURE_HINT_SHINY_MASK  shinyness mask map
+0x0         W3DTEXTURE_HINT_BASE          base texture
+0x100       W3DTEXTURE_HINT_EMISSIVE      emissive map
+0x200       W3DTEXTURE_HINT_ENVIRONMENT   environment/reflection map
+0x300       W3DTEXTURE_HINT_SHINY_MASK    shinyness mask map
 
 0x1000      W3DTEXTURE_TYPE_MASK
-0x0         W3DTEXTURE_TYPE_COLORMAP    Color map.
-0x1000      W3DTEXTURE_TYPE_BUMPMAP     Grayscale heightmap (to be converted to bumpmap).
-==========  ==========================  ==============
+0x0         W3DTEXTURE_TYPE_COLORMAP      Color map.
+0x1000      W3DTEXTURE_TYPE_BUMPMAP       Grayscale heightmap (to be converted to bumpmap).
+==========  ===========================  ==============
 
 W3D_TEXTURE_ANIMATION_FLAGS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1386,7 +1387,7 @@ Per-vertex diffuse illumination values.
 ======  ======  ============  ====================
 Offset  Bytes   Type          Name
 ======  ======  ============  ====================
-0       4 * N   `W3D_RGB`_   DIG
+0       4 * N   `W3D_RGB`_    DIG
 ======  ======  ============  ====================
 
 ``N`` is the number of Vertices with DIG values.
@@ -1485,11 +1486,11 @@ W3D_CHUNK_PER_FACE_TEXCOORD_IDS
 
 Indices to `W3D_CHUNK_STAGE_TEXCOORDS`_.
 
-======  ======  ==============  ====================
-Offset  Bytes   Type            Name
-======  ======  ==============  ====================
-0       4 * N   `W3D_VECTOR3i`_ Face UV Indices
-======  ======  ==============  ====================
+======  ======  ===============  ====================
+Offset  Bytes   Type              Name
+======  ======  ===============  ====================
+0       4 * N   `W3D_VECTOR3i`_   Face UV Indices
+======  ======  ===============  ====================
 
 TODO: Dig Deeper here
 
@@ -1633,7 +1634,7 @@ then consumes the remainder of this chunk's payload as reserved.
 
 
 W3D_CHUNK_DEFORM_SET
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 Set of deform information
 Appears in the Generals 3dsMAX Exporter code
 Appears in the Earth & Beyond W3D Parser code
@@ -1664,7 +1665,7 @@ Offset  Bytes  Type         Name
 * **Flags**: Any flags / attributes associated with this set.
 
 W3D_CHUNK_DEFORM_KEYFRAME
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 A keyframe of deform information in the set
 Appears in the Generals 3dsMAX Exporter code
 Appears in the Earth & Beyond W3D Parser code
@@ -1695,7 +1696,7 @@ Offset  Bytes  Type         Name
 * **DataCount**: The amount of data for this keyframe.
 
 W3D_CHUNK_DEFORM_DATA
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 Deform information about a single vertex
 Appears in the Generals 3dsMAX Exporter code
 Appears in the Earth & Beyond W3D Parser code
@@ -1735,11 +1736,11 @@ W3D_CHUNK_TANGENTS
 
 Array of tangent vectors.
 
-======  ======  =============     ====================
-Offset  Bytes   Type              Name
-======  ======  =============     ====================
-0       12 * N  `W3D_VECTOR3`_[N] Tangent
-======  ======  =============     ====================
+======  ======  =================  ====================
+Offset  Bytes   Type                  Name
+======  ======  =================  ====================
+0       12 * N  `W3D_VECTOR3`_[N]     Tangent
+======  ======  =================  ====================
 
 ``N`` is the number of vertices specified in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
 
@@ -1751,11 +1752,11 @@ W3D_CHUNK_BITANGENTS
 Array of bitangent vectors.
 Also Known as W3D_CHUNK_BINORMALS
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
+======  ======  =================  ====================
+Offset  Bytes   Type               Name
+======  ======  =================  ====================
 0       12 * N  `W3D_VECTOR3`_[N]  Binormal
-======  ======  =============  ====================
+======  ======  =================  ====================
 
 ``N`` is the number of vertices specified in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
 
@@ -1857,14 +1858,14 @@ the format used by AABTreeClass in WW3D.
 
 For each Node specified in the `W3D_CHUNK_AABTREE_HEADER`_ chunk.
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       12     `W3D_VECTOR3`_  Min
-12      12     `W3D_VECTOR3`_  Max
-24      4       UINT32         FrontorPoly0
-28      4       UINT32         BackOrPolyCount
-======  ======  =============  ====================
+======  ======  ===============  ====================
+Offset  Bytes   Type              Name
+======  ======  ===============  ====================
+0       12      `W3D_VECTOR3`_    Min
+12      12      `W3D_VECTOR3`_    Max
+24      4       UINT32            FrontorPoly0
+28      4       UINT32            BackOrPolyCount
+======  ======  ===============  ====================
 
 * **Min**: Min corner of the box. 
 * **Max**: Max corner of the box.
@@ -1926,14 +1927,14 @@ W3D_CHUNK_HIERARCHY_HEADER
 
 Hierarchy header contains general info about the hierarchy.
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       4       UINT32         Version
-4       16      CHAR[16]       Name
-20      4       UINT32         NumPivots
-24      4      `W3D_VECTOR3`_  Center
-======  ======  =============  ====================
+======  ======  ==============  ====================
+Offset  Bytes   Type            Name
+======  ======  ==============  ====================
+0       4       UINT32          Version
+4       16      CHAR[16]        Name
+20      4       UINT32          NumPivots
+24      4       `W3D_VECTOR3`_  Center
+======  ======  ==============  ====================
 
 * **Version**: W3D Format `W3D_VERSION`_ . 
 * **Name**: 16 Byte Field for the name of the file.
@@ -1948,15 +1949,15 @@ Contains a Pivot Structure for each node in the tree.
 Contains a ROOTRANSFORM node at index -1: 
 0xffffffff = root pivot; no parent
 
-======  ======  =============    ====================
-Offset  Bytes   Type              Name
-======  ======  =============    ====================
-0       16      CHAR[16]         Name
-16      4       UINT32           ParentIDx
-20      12     `W3D_VECTOR3`_    Translation
-32      12     `W3D_VECTOR3`_    EulerAngles
-44      16     `W3D_QUATERNION`_ Rotation
-======  ======  =============  ====================
+======  ======  ================  ====================
+Offset  Bytes   Type                Name
+======  ======  ================  ====================
+0       16      CHAR[16]            Name
+16      4       UINT32              ParentIDx
+20      12      `W3D_VECTOR3`_      Translation
+32      12      `W3D_VECTOR3`_      EulerAngles
+44      16      `W3D_QUATERNION`_   Rotation
+======  ======  =================  ====================
 
 * **Name**: 16 Byte Field for the name of the node
 * **ParentIDx**: Id of Parent.
@@ -2286,7 +2287,7 @@ Offset  Bytes   Type           Name
 36      4       UINT32         FrameCount
 40      4       FLOAT32        FrameRate
 44      4       UINT32         ChannelCount
-==========  ================== ====================
+======  ======  =============  ====================
 
 * **Version**: W3D Format `W3D_VERSION`_ .
 * **Name**: 16 Byte field for the name of the file.
@@ -2419,8 +2420,8 @@ Offset  Bytes   Type           Name
 * **PivotIDx**: Pivot ID of the Node
 
 
-W3D_CHUNK_COLLISON_NODE
-~~~~~~~~~~~~~~~~~~~~~~~
+W3D_CHUNK_COLLISION_NODE
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Collision meshes connected to the hierarchy
 
@@ -2627,11 +2628,11 @@ May appear in meshes, hmodels, lodmodels, or collections.
 	mesh, hmodel, or collection chunk.  When it does, the points should simply 
 	be associated with the model being defined.
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       12      `W3D_VECTOR3`_    Point
-======  ======  =============  ====================
+======  ======  ==============  ====================
+Offset  Bytes   Type            Name
+======  ======  ==============  ====================
+0       12      `W3D_VECTOR3`_  Point
+======  ======  ==============  ====================
 
 
 * **Point**: 3dxMax Helper Object (Point)
@@ -2666,9 +2667,9 @@ Offset  Bytes   Type           Name
 ======  ======  =============  ====================
 0       4       UINT32         LightFlags
 4       4       UINT32         Unused
-8       4      `W3D_RGB`_      Ambient
-12      4      `W3D_RGB`_      Diffuse
-16      4      `W3D_RGB`_      Specular
+8       4       `W3D_RGB`_      Ambient
+12      4       `W3D_RGB`_      Diffuse
+16      4       `W3D_RGB`_      Specular
 20      4       FLOAT32        Intensity
 ======  ======  =============  ====================
 
@@ -2682,28 +2683,28 @@ Offset  Bytes   Type           Name
 W3D_LIGHT_FLAGS
 ~~~~~~~~~~~~~~~
 
-==========  =============================  ==============
-Value       Name                           Description
-==========  =============================  ==============
+==========  ================================  ==============
+Value       Name                              Description
+==========  ================================  ==============
 0xFF        W3D_LIGHT_ATTRIBUTE_TYPE_MASK                   
 0x1         W3D_LIGHT_ATTRIBUTE_POINT                     
 0x2         W3D_LIGHT_ATTRIBUTE_DIRECTIONAL                 
 0x3         W3D_LIGHT_ATTRIBUTE_SPOT                   
 0x100       W3D_LIGHT_ATTRIBUTE_CAST_SHADOWS                     
-==========  =============================  ==============
+==========  ================================  ==============
 
 W3D_CHUNK_SPOT_LIGHT_INFO
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Extra spot light parameters
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       12      `W3D_VECTOR3`_    SpotDirection
-12      4       FLOAT32        SpotAngle
-16      4       FLOAT32        SpotExponent
-======  ======  =============  ====================
+======  ======  ==============  ====================
+Offset  Bytes   Type            Name
+======  ======  ==============  ====================
+0       12      `W3D_VECTOR3`_  SpotDirection
+12      4       FLOAT32         SpotAngle
+16      4       FLOAT32         SpotExponent
+======  ======  ==============  ====================
 
 * **SpotDirection**: 
 * **SpotAngle**: 
@@ -2714,6 +2715,22 @@ W3D_CHUNK_NEAR_ATTENUATION
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Optional near attenuation parameters
+
+======  ======  =============  ====================
+Offset  Bytes   Type           Name
+======  ======  =============  ====================
+0       4       FLOAT32        Start
+4       4       FLOAT32        End
+======  ======  =============  ====================
+
+* **Start**: 
+* **End**: 
+
+
+W3D_CHUNK_FAR_ATTENUATION
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Optional far attenuation parameters
 
 ======  ======  =============  ====================
 Offset  Bytes   Type           Name
@@ -2827,9 +2844,9 @@ W3D_CHUNK_EMITTER_INFO
 
 Generic particle emitter definition.
 
-======  ======  =============  ====================
+======  ======  ==============  ====================
 Offset  Bytes   Type           Name
-======  ======  =============  ====================
+======  ======  ==============  ====================
 0       260     CHAR[260]      TextureFilename
 260     4       FLOAT32        StartSize
 264     4       FLOAT32        EndSize
@@ -2841,11 +2858,11 @@ Offset  Bytes   Type           Name
 288     4       FLOAT32        FadeTime
 292     4       FLOAT32        Gravity
 296     4       FLOAT32        Elasticity
-308     12     `W3D_VECTOR3`_  Velocity
-320     12     `W3D_VECTOR3`_  Acceleration
-324     4      `W3D_RGB`_      StartColor
-328     4      `W3D_RGB`_      EndColor
-======  ======  =============  ====================
+308     12      `W3D_VECTOR3`_  Velocity
+320     12      `W3D_VECTOR3`_  Acceleration
+324     4       `W3D_RGB`_      StartColor
+328     4       `W3D_RGB`_      EndColor
+======  ======  ==============  ====================
 
 * **TextureFilename**:
 * **StartSize**:
@@ -2909,7 +2926,7 @@ Offset  Bytes   Type              Name
 0       4       UINT32            ColorKeyframes
 4       4       UINT32            OpacityKeyframes
 12      4       UINT32            SizeKeyframes
-16      4      `W3D_RGBA`_        ColorRandom
+16      4       `W3D_RGBA`_        ColorRandom
 20      4       FLOAT32           OpacityRandom
 24      4       FLOAT32           SizeRandom
 28      16      UINT32[4]         Reserved
@@ -2953,9 +2970,9 @@ Offset  Bytes   Type              Name
 W3D_EMITTER_LINE_FLAGS
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-==========  ==================================      ==============
-Value       Name                                    Description
-==========  ==================================      ==============
+==========  ====================================    ==============
+Value       Name                                      Description
+==========  ====================================    ==============
 0x1         W3D_ELINE_MERGE_INTERSECTIONS           Merge intersections     
 0x2         W3D_ELINE_FREEZE_RANDOM                 Freeze random (note: offsets are in camera space)       
 0x4         W3D_ELINE_DISABLE_SORTING               Disable sorting (even if shader has alpha-blending)      
@@ -2965,7 +2982,7 @@ Value       Name                                    Description
 0x0         W3D_ELINE_UNIFORM_WIDTH_TEXTURE_MAP     Entire line uses one row of texture (constant V)
 0x1         W3D_ELINE_UNIFORM_LENGTH_TEXTURE_MAP    Entire line uses one row of texture stretched length-wise  
 0x2         W3D_ELINE_TILED_TEXTURE_MAP             Tiled continuously over line                 
-==========  =============================           ==============
+==========  ====================================    ==============
 
 W3D_ELINE_DEFAULT_BITS =	(W3D_ELINE_MERGE_INTERSECTIONS | (W3D_ELINE_UNIFORM_WIDTH_TEXTURE_MAP << W3D_ELINE_TEXTURE_MAP_MODE_OFFSET))
 
@@ -3144,27 +3161,27 @@ W3D_CHUNK_TEXTURE_REPLACER_INFO
 
 Information about which meshes need textures replaced
 
-======  ======  ===============   ====================
-Offset  Bytes   Type              Name
-======  ======  ===============   ====================
-0       4       UINT32            ReplacedTextureCount
-======  ======  ===============   ====================
+======  ======  ========================   ====================
+Offset  Bytes   Type                        Name
+======  ======  ========================   ====================
+0       4       UINT32                      ReplacedTextureCount
+======  ======  ========================   ====================
 
-======  ======  ===============   ====================
-Offset  Bytes   Type              Name
-======  ======  ===============   ====================
-X       32      CHAR[32]          MeshPath[0]
+======  ======  ========================   ====================
+Offset  Bytes   Type                        Name
+======  ======  ========================   ====================
+X       32      CHAR[32]                    MeshPath[0]
+---------------------------------------------------------------
+X       32      CHAR[32]                    MeshPath[14]
 ------------------------------------------------------
-X       32      CHAR[32]          MeshPath[14]
+X       32      CHAR[32]                    BonePath[0]
 ------------------------------------------------------
-X       32      CHAR[32]          BonePath[0]
+X       32      CHAR[32]                    BonePath[14]
 ------------------------------------------------------
-X       32      CHAR[32]          BonePath[14]
-------------------------------------------------------
-X       260     CHAR[260]         OldTextureName
-X       260     CHAR[260]         NewTextureName
-X       12      `W3D_CHUNK_TEXTURE_INFO`_ TextureParams
-======  ======  ===============   ====================
+X       260     CHAR[260]                   OldTextureName
+X       260     CHAR[260]                   NewTextureName
+X       12      `W3D_CHUNK_TEXTURE_INFO`_   TextureParams
+======  ======  =========================   ====================
 
 * **ReplacedTextureCount**: 
 * **MeshPath**: 
@@ -3360,9 +3377,9 @@ Offset  Bytes   Type              Name
 0       4       UINT32            Version
 4       4       UINT32            BoxFlags
 8       32      CHAR[32]          Name
-40      4      `W3D_RGB`_         Color
-44      12     `W3D_VECTOR3`_     Center
-56      12     `W3D_VECTOR3`_     Extent
+40      4       `W3D_RGB`_         Color
+44      12      `W3D_VECTOR3`_     Center
+56      12      `W3D_VECTOR3`_     Extent
 ======  ======  ===============   ====================
 
 * **Version**: W3D Format `W3D_VERSION`_ .
@@ -3379,16 +3396,16 @@ W3D_BOX_FLAGS
 ==========  ==========================================  ===========================================
 Value       Name                                        Description
 ==========  ==========================================  ===========================================
-0x1         W3D_BOX_ATTRIBUTE_ORIENTED                  WorldBox                         
-0x2         W3D_BOX_ATTRIBUTE_ALIGNED                   Bounding Box                
-0xFF0       W3D_BOX_ATTRIBUTE_COLLISION_TYPE_MASK       Mask for the collision type bits                
-4           W3D_BOX_ATTRIBUTE_COLLISION_TYPE_SHIFT      Shifting to get to the collision type bits                 
-0x10        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_PHYSICAL   Physical collisions                   
-0x20        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_PROJECTILE Projectiles (rays) collide with this
-0x40        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VIS        Vis rays collide with this mesh
-0x80        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_CAMERA     Cameras collide with this mesh   
-0x100       W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VEHICLE    Vehicles collide with this mesh
-==========  ============================================  ==========================================  
+0x1         W3D_BOX_ATTRIBUTE_ORIENTED                    WorldBox                         
+0x2         W3D_BOX_ATTRIBUTE_ALIGNED                     Bounding Box                
+0xFF0       W3D_BOX_ATTRIBUTE_COLLISION_TYPE_MASK         Mask for the collision type bits                
+4           W3D_BOX_ATTRIBUTE_COLLISION_TYPE_SHIFT        Shifting to get to the collision type bits                 
+0x10        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_PHYSICAL     Physical collisions                   
+0x20        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_PROJECTILE   Projectiles (rays) collide with this
+0x40        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VIS          Vis rays collide with this mesh
+0x80        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_CAMERA       Cameras collide with this mesh   
+0x100       W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VEHICLE      Vehicles collide with this mesh
+==========  ==========================================  ===========================================
 
 W3D_CHUNK_SPHERE
 ~~~~~~~~~~~~~~~~~
@@ -3411,7 +3428,7 @@ Value       Name                        Description
 0x3         CHUNKID_ALPHA_CHANNEL       Wrapper for CHUNKID_VARIABLES
 0x4         CHUNKID_SCALE_CHANNEL       Wrapper for CHUNKID_VARIABLES
 0x5         CHUNKID_VECTOR_CHANNEL      Wrapper for CHUNKID_VARIABLES
-==========  ==========================  ===========================
+==========  ==========================  ==========================
 
 Each of the Channels will wrap another subchunk:
 
@@ -3421,22 +3438,22 @@ Which will then contain the Micochunks.
 
 **CHUNKID_SPHERE_DEF**
 
-======  ======  ===============     ====================
-Offset  Bytes   Type                Name
-======  ======  ===============     ====================
-0       4       UINT32              Version
-4       4       UINT32              SphereFlags
-8       32      CHAR[32]            Name
-40      12     `W3D_VECTOR3`_       Center
-52      12     `W3D_VECTOR3`_       Extent
-64      4       FLOAT32             AnimDuration
-68      12     `W3D_VECTOR3`_       DefaultColor
-72      4       FLOAT32             DefaultAlpha
-84      12     `W3D_VECTOR3`_       DefaultScale
-96      20     `W3D_ALPHA_VECTOR`_  DefaultVector
-116     32      CHAR[32]            TextureName
-148     16     `W3D_SHADER`_        Shader
-======  ======  ===============     ====================
+======  ======  ====================     ====================
+Offset  Bytes   Type                      Name
+======  ======  ====================     ====================
+0       4       UINT32                    Version
+4       4       UINT32                    SphereFlags
+8       32      CHAR[32]                  Name
+40      12      `W3D_VECTOR3`_            Center
+52      12      `W3D_VECTOR3`_            Extent
+64      4       FLOAT32                   AnimDuration
+68      12      `W3D_VECTOR3`_            DefaultColor
+72      4       FLOAT32                   DefaultAlpha
+84      12      `W3D_VECTOR3`_            DefaultScale
+96      20      `W3D_ALPHA_VECTOR`_       DefaultVector
+116     32      CHAR[32]                  TextureName
+148     16      `W3D_SHADER`_             Shader
+======  ======  ====================     ====================
 
 * **Version**: W3D Format `W3D_VERSION`_ .
 * **SphereFlags**: bitwise-or'd collection of `W3D_SPHERE_FLAGS`_ values.
@@ -3489,12 +3506,12 @@ Offset  Bytes   Type              Name
 
 CHUNKID_VARIABLES		= 0x03150809
 
-======  ======  ===============     ====================
-Offset  Bytes   Type                Name
-======  ======  ===============     ====================
-0       20     `W3D_ALPHA_VECTOR`_  Value
-20      4       FLOAT32             Time                      
-======  ======  ===============     ====================
+======  ======  ==================     ====================
+Offset  Bytes   Type                    Name
+======  ======  ==================     ====================
+0       20     `W3D_ALPHA_VECTOR`_      Value
+20      4       FLOAT32                 Time                      
+======  ======  ==================     ====================
 
 
 W3D_SPHERE_FLAGS
@@ -3523,15 +3540,15 @@ While the Color, Alpha, Inner Scale and Outer Scale will each have it's own subc
 
 These will overlap with standard chunk ID's so care must be made to read these correctly.
 
-==========  ==========================    ==========================
-Value       Name                          Description
-==========  ==========================    ==========================
-0x1         CHUNKID_RING_DEF              Contains Header Information
-0x2         CHUNKID_COLOR_CHANNEL         Wrapper for CHUNKID_VARIABLES
-0x3         CHUNKID_ALPHA_CHANNEL         Wrapper for CHUNKID_VARIABLES
-0x4         CHUNKID_INNER_SCALE_CHANNEL   Wrapper for CHUNKID_VARIABLES
-0x5         CHUNKID_OUTER_SCALE_CHANNEL   Wrapper for CHUNKID_VARIABLES
-==========  ==========================  ===========================
+==========  ===========================    ==========================
+Value       Name                            Description
+==========  ===========================    ==========================
+0x1         CHUNKID_RING_DEF                Contains Header Information
+0x2         CHUNKID_COLOR_CHANNEL           Wrapper for CHUNKID_VARIABLES
+0x3         CHUNKID_ALPHA_CHANNEL           Wrapper for CHUNKID_VARIABLES
+0x4         CHUNKID_INNER_SCALE_CHANNEL     Wrapper for CHUNKID_VARIABLES
+0x5         CHUNKID_OUTER_SCALE_CHANNEL     Wrapper for CHUNKID_VARIABLES
+==========  ===========================    ==========================
 
 Each of the Channels will wrap another subchunk:
 
@@ -3547,15 +3564,15 @@ Offset  Bytes   Type              Name
 0       4       UINT32            Version
 4       4       UINT32            RingFlags
 8       32      CHAR[32]          Name
-40      12     `W3D_VECTOR3`_     Center
-52      12     `W3D_VECTOR3`_     Extent
+40      12      `W3D_VECTOR3`_     Center
+52      12      `W3D_VECTOR3`_     Extent
 64      4       FLOAT32           AnimDuration
-68      12     `W3D_VECTOR3`_     DefaultColor
+68      12      `W3D_VECTOR3`_     DefaultColor
 72      4       FLOAT32           DefaultAlpha
-76      8      `W3D_VECTOR2`_     DefaultInnerScale
-84      8      `W3D_VECTOR2`_     DefaultOuterSCale
-92      8      `W3D_VECTOR2`_     InnerExtent
-100     8      `W3D_VECTOR2`_     OuterExtent
+76      8       `W3D_VECTOR2`_     DefaultInnerScale
+84      8       `W3D_VECTOR2`_     DefaultOuterSCale
+92      8       `W3D_VECTOR2`_     InnerExtent
+100     8       `W3D_VECTOR2`_     OuterExtent
 108     32      CHAR[32]          TextureName
 140     16      `W3D_SHADER`_     Shader
 156     16      UINT16            TextureTileCount
@@ -3584,7 +3601,7 @@ CHUNKID_VARIABLES		= 0x03150809
 ======  ======  ===============   ====================
 Offset  Bytes   Type              Name
 ======  ======  ===============   ====================
-0       12     `W3D_VECTOR3`_     Value
+0       12      `W3D_VECTOR3`_     Value
 12      4       FLOAT32           Time                      
 ======  ======  ===============   ====================
 
@@ -3606,7 +3623,7 @@ CHUNKID_VARIABLES		= 0x03150809
 ======  ======  ===============   ====================
 Offset  Bytes   Type              Name
 ======  ======  ===============   ====================
-0       8      `W3D_VECTOR2`_     Value
+0       8       `W3D_VECTOR2`_     Value
 8       4       FLOAT32           Time                      
 ======  ======  ===============   ====================
 
@@ -3621,7 +3638,7 @@ Offset  Bytes   Type              Name
 8       4       FLOAT32           Time                      
 ======  ======  ===============   ====================
 
-W3D_SPHERE_FLAGS
+W3D_RING_FLAGS
 ~~~~~~~~~~~~~~~~
 
 ==========  ==========================  ==============
@@ -3792,7 +3809,7 @@ Value       Name                          Description
 ==========  ==========================    ==========================
 0x100         CHUNKID_VARIABLES           Wrapper for VARIABLES
 0x200         CHUNKID_BASE_CLASS          Wrapper for CHUNKID_VARIABLES
-==========  ==========================    ===========================
+==========  ==========================    ==========================
 
 **CHUNKID_VARIABLES**
 
@@ -3821,7 +3838,7 @@ Offset  Bytes   Type              Name
 57+N+M  4       FLOAT32           m_LogicalNotifDelay
 58+N+M  1       UINT8             m_CreateLogicalSound
 62+N+M  4       FLOAT32           m_LogicalDropofRadius
-74+N+M  12     `W3D_VECTOR3`_     m_SphereColor   
+74+N+M  12      `W3D_VECTOR3`_     m_SphereColor   
 ======  ======  ===============   ====================
 
 * **m_Priority**:
@@ -3876,7 +3893,7 @@ GENERALS: "Shader mesh" Mesh with multiple sub-meshes that use the scaleable sha
 	NOTE: ShdMeshes re-use the following chunks from regular meshes:
 
   	`W3D_CHUNK_VERTICES`_
-		`W3D_CHUNK_VERTEX_NORMALS`  	 
+		`W3D_CHUNK_VERTEX_NORMALS`_  	 
     `W3D_CHUNK_VERTICES`_
 		`W3D_CHUNK_TRIANGLES`_
 		`W3D_CHUNK_MESH_USER_TEXT`_
@@ -3923,9 +3940,9 @@ Offset  Bytes   Type              Name
 12      4       UINT32            NumVertices
 16      4       UINT32            NumSubMeshes
 20      20      UINT32[5]         FutureCounts
-40      12     `W3D_VECTOR3`_     BoxMin
-52      12     `W3D_VECTOR3`_     BoxMax 
-64      12     `W3D_VECTOR3`_     SphCenter 
+40      12      `W3D_VECTOR3`_     BoxMin
+52      12      `W3D_VECTOR3`_     BoxMax 
+64      12      `W3D_VECTOR3`_     SphCenter 
 76      4       FLOAT32           SphRadius 
 ======  ======  ===============   ====================
 
@@ -3992,9 +4009,9 @@ Offset  Bytes   Type              Name
 0       4       UINT32            NumTriangles
 4       4       UINT32            NumVertices
 8       8       UINT32[2]         FutureCounts
-16      12     `W3D_VECTOR3`_     BoxMin
-28      12     `W3D_VECTOR3`_     BoxMax 
-40      12     `W3D_VECTOR3`_     SphCenter 
+16      12      `W3D_VECTOR3`_     BoxMin
+28      12      `W3D_VECTOR3`_     BoxMax 
+40      12      `W3D_VECTOR3`_     SphCenter 
 52      4       FLOAT32           SphRadius 
 ======  ======  ===============   ====================
 
@@ -4036,7 +4053,7 @@ Offset  Bytes   Type              Name
 * **ShaderClass**:
 
 W3D_CHUNK_SHDSUBMESH_SHADER_DEF
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Also Known as W3D_CHUNK_SHDSUBMESH_SHADER_DATA
 
 ======  ======  ===============   ====================
@@ -4078,11 +4095,11 @@ W3D_CHUNK_SHDSUBMESH_TRIANGLES
 
 GENERALS: array of 16bit int triplets (vertex indices for each triangle)
 
-======  ======  ===============   ====================
-Offset  Bytes   Type              Name
-======  ======  ===============   ====================
-0       6       `W3D_VECTOR3i16`_ Triangles
-======  ======  ===============   ====================
+======  ======  =================   ====================
+Offset  Bytes   Type                  Name
+======  ======  =================   ====================
+0       6       `W3D_VECTOR3i16`_     Triangles
+======  ======  =================   ====================
 
 * **Triangles**:
 
@@ -4094,7 +4111,7 @@ GENERALS: shade indexes for each vertex.
 ======  ======  ===============   ====================
 Offset  Bytes   Type              Name
 ======  ======  ===============   ====================
-0       12     `W3D_VECTOR3`_     Indices 
+0       12      `W3D_VECTOR3`_     Indices 
 ======  ======  ===============   ====================
 
 * **Indices**:
@@ -4104,11 +4121,11 @@ W3D_CHUNK_SHDSUBMESH_UV0
 
 GENERALS: per-vertex texture coordinates
 
-======  ======  ============    ====================
-Offset  Bytes   Type            Name
-======  ======  ============    ====================
-0       8 * N  `W3D_TEXCOORD`_  Vertex UV
-======  ======  ============    ====================
+======  ======  ===============    ====================
+Offset  Bytes   Type                Name
+======  ======  ===============    ====================
+0       8 * N   `W3D_TEXCOORD`_      Vertex UV
+======  ======  ===============   ====================
 
 * **Vertex UV**:
 
@@ -4117,11 +4134,11 @@ W3D_CHUNK_SHDSUBMESH_UV1
 
 GENERALS: per-vertex texture coordinates
 
-======  ======  ============    ====================
-Offset  Bytes   Type            Name
-======  ======  ============    ====================
-0       8 * N  `W3D_TEXCOORD`_  Vertex UV
-======  ======  ============    ====================
+======  ======  ===============    ====================
+Offset  Bytes   Type                Name
+======  ======  ===============    ====================
+0       8 * N   `W3D_TEXCOORD`_     Vertex UV
+======  ======  ===============    ====================
 
 * **Vertex UV**:
 
@@ -4136,7 +4153,7 @@ Offset  Bytes   Type              Name
 0       12      `W3D_VECTOR3`_    Tangents
 ======  ======  ===============   ====================
 
-* **Tangents*:
+* **Tangents**:
 
 W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_T
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -4149,7 +4166,7 @@ Offset  Bytes   Type              Name
 0       12      `W3D_VECTOR3`_    Tangents
 ======  ======  ===============   ====================
 
-* **Tangents*:
+* **Tangents**:
 
 W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_SXT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -4159,13 +4176,14 @@ GENERALS: per-vertex tangent basis SxT vectors
 ======  ======  ===============   ====================
 Offset  Bytes   Type              Name
 ======  ======  ===============   ====================
-0       12     `W3D_VECTOR3`_     Tangents
+0       12      `W3D_VECTOR3`_     Tangents
 ======  ======  ===============   ====================
 
-* **Tangents*:
+* **Tangents**:
 
-W3D_CHUNK_SHDSUBMESH_COLOR
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+W3D_CHUNK_SHDSUBMESH_VERTEX_COLOR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GENERALS: per-vertex color
 
@@ -4182,13 +4200,13 @@ but not the same as, the vertices in W3D_CHUNK_VERTICES.
 
 Also Known as W3D_CHUNK_VERTICES_COPY
 
-======  ======  =============     ====================
-Offset  Bytes   Type              Name
-======  ======  =============     ====================
-0       12 * N  `W3D_VECTOR3`_[N] Vertices
-======  ======  =============     ====================
+======  ======  =================     ====================
+Offset  Bytes   Type                  Name
+======  ======  =================     ====================
+0       12 * N  `W3D_VECTOR3`_[N]     Vertices
+======  ======  =================     ====================
 
-* **Vertices*:
+* **Vertices**:
 
 W3D_CHUNK_SECONDARY_VERTEX_NORMALS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -4198,11 +4216,11 @@ but not the same as, the normals in W3D_CHUNK_NORMALS.
 
 Also Known as W3D_CHUNK_VERTEX_NORMALS_COPY
 
-======  ======  =============     ====================
-Offset  Bytes   Type              Name
-======  ======  =============     ====================
-0       12 * N  `W3D_VECTOR3`_[N] Normals
-======  ======  =============     ====================
+======  ======  =================     ====================
+Offset  Bytes   Type                  Name
+======  ======  =================     ====================
+0       12 * N  `W3D_VECTOR3`_[N]     Normals
+======  ======  =================     ====================
 
 * **Normals**:
 
@@ -4223,40 +4241,40 @@ W3D_CHUNK_MESH_HEADER
 
 OBSOLETE: header for a mesh version 1
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       4       UINT32         Version
-4       16      CHAR[16]       MeshName
-20      4       UINT32         Attributes
-24      4       UINT32         NumTriangles
-28      4       UINT32         NumQuads
-32      4       UINT32         NumSrTris
-36      4       UINT32         NumPovQuads
-40      4       UINT32         NumVertices
-44      4       UINT32         NumNormals
-48      4       UINT32         NumSrNormals
-52      4       UINT32         NumTexCoords
-56      4       UINT32         NumMaterials
-60      4       UINT32         NumVertColors
-64      4       UINT32         NumVertInfluences
-68      4       UINT32         NumDamageStages
-72      32      UINT32[8]      FutureCounts
-104     4       FLOAT32        LODMin
-108     4       FLOAT32        LODMax
-112     12     `W3D_VECTOR3`_  Min
-124     12     `W3D_VECTOR3`_  Max
-136     12     `W3D_VECTOR3`_  SphCenter
-148      4      FLOAT32        SphRadius
-152     12     `W3D_VECTOR3`_  Translation
-164     36      FLOAT32[9]     Rotation
-200     12     `W3D_VECTOR3`_  MassCenter
-212     36      FLOAT32[9]     Inertia
-248     4       FLOAT32        Volume
-252     16      CHAR[16]       HierarchyTreeName
-268     16      CHAR[16]       HierarchyModelName
-284     96      UINT32[24]     FutureUse
-======  ======  =============  ====================
+======  ======  ===============  ====================
+Offset  Bytes   Type              Name
+======  ======  ===============  ====================
+0       4       UINT32           Version
+4       16      CHAR[16]         MeshName
+20      4       UINT32           Attributes
+24      4       UINT32           NumTriangles
+28      4       UINT32           NumQuads
+32      4       UINT32           NumSrTris
+36      4       UINT32           NumPovQuads
+40      4       UINT32           NumVertices
+44      4       UINT32           NumNormals
+48      4       UINT32           NumSrNormals
+52      4       UINT32           NumTexCoords
+56      4       UINT32           NumMaterials
+60      4       UINT32           NumVertColors
+64      4       UINT32           NumVertInfluences
+68      4       UINT32           NumDamageStages
+72      32      UINT32[8]        FutureCounts
+104     4       FLOAT32          LODMin
+108     4       FLOAT32          LODMax
+112     12      `W3D_VECTOR3`_   Min
+124     12      `W3D_VECTOR3`_   Max
+136     12      `W3D_VECTOR3`_   SphCenter
+148      4      FLOAT32          SphRadius
+152     12      `W3D_VECTOR3`_   Translation
+164     36      FLOAT32[9]       Rotation
+200     12      `W3D_VECTOR3`_   MassCenter
+212     36      FLOAT32[9]       Inertia
+248     4       FLOAT32          Volume
+252     16      CHAR[16]         HierarchyTreeName
+268     16      CHAR[16]         HierarchyModelName
+284     96      UINT32[24]       FutureUse
+======  ======  ===============  ====================
 
 
 
@@ -4265,22 +4283,22 @@ W3D_CHUNK_SURRENDER_NORMALS
 
 OBSOLETE: array of surrender normals (one per vertex as req. by surrender)
 
-======  ======  =============  ====================
-Offset  Bytes   Type           Name
-======  ======  =============  ====================
-0       12     `W3D_VECTOR3`_  SrNormals
-======  ======  =============  ====================
+======  ======  ==============  ====================
+Offset  Bytes   Type            Name
+======  ======  ==============  ====================
+0       12      `W3D_VECTOR3`_  SrNormals
+======  ======  ==============  ====================
 
 W3D_CHUNK_TEXCOORDS
 ~~~~~~~~~~~~~~~~~~~~
 
 OBSOLETE: array of texture coordinates
 
-======  ======  ============    ====================
-Offset  Bytes   Type            Name
-======  ======  ============    ====================
-0       8 * N  `W3D_TEXCOORD`_  TexCoord
-======  ======  ============    ====================
+======  ======  ===============    ====================
+Offset  Bytes   Type                Name
+======  ======  ===============    ====================
+0       8 * N   `W3D_TEXCOORD`_     TexCoord
+======  ======  ===============    ====================
 
 O_W3D_CHUNK_MATERIALS
 ~~~~~~~~~~~~~~~~~~~~~
@@ -4315,16 +4333,16 @@ O_W3D_CHUNK_SURRENDER_TRIANGLES
 
 OBSOLETE: array of surrender format tris
 
-======  ======  ============        ====================
-Offset  Bytes   Type                Name
-======  ======  ============        ====================
-0       12      UINT32[3]           VIndex 
-12      24     `W3D_TEXCOORD`_[3]   TexCoord
-36      4       UINT32              MaterialIDx
-40      12     `W3D_VECTOR3`_       Normal
-52      4       UINT32              Atributes 
-56      12     `W3D_RGB`_ [3]       Gouraud
-======  ======  ============        ====================
+======  ======  ==================        ====================
+Offset  Bytes   Type                      Name
+======  ======  ==================        ====================
+0       12      UINT32[3]                  VIndex 
+12      24      `W3D_TEXCOORD`_[3]         TexCoord
+36      4       UINT32                     MaterialIDx
+40      12      `W3D_VECTOR3`_             Normal
+52      4       UINT32                     Atributes 
+56      12      `W3D_RGB`_ [3]             Gouraud
+======  ======  ==================        ====================
 
 
 O_W3D_CHUNK_POV_TRIANGLES
@@ -4378,12 +4396,12 @@ W3D_CHUNK_DAMAGE_VERTICES
 
 OBSOLETE: Array of modified vertices (W3dMeshDamageVertexStruct's)
 
-======  ======  ============    ====================
-Offset  Bytes   Type            Name
-======  ======  ============    ====================
-0       4       UINT32          VertexIndex
-4       12     `W3D_VECTOR3`_   NewVertex
-======  ======  ============    ====================
+======  ======  ==============    ====================
+Offset  Bytes   Type                Name
+======  ======  ==============    ====================
+0       4       UINT32              VertexIndex
+4       12      `W3D_VECTOR3`_    NewVertex
+======  ======  ==============    ====================
 
 W3D_CHUNK_DAMAGE_COLORS
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4394,7 +4412,7 @@ OBSOLETE: Array of modified vert colors (W3dMeshDamageColorStruct's)
 Offset  Bytes   Type            Name
 ======  ======  ============    ====================
 0       4       UINT32          VertexIndex
-4       4      `W3D_RGB`_       NewColor
+4       4       `W3D_RGB`_       NewColor
 ======  ======  ============    ====================
 
 
@@ -4452,12 +4470,12 @@ OBSOLETE: contains a W3dMaterial3Struct, general material info
 Offset  Bytes   Type          Name
 ======  ======  ============  ====================
 0       4       UINT32        Material3Flags
-4       4      `W3D_RGB`_     DiffuseColor
-8       4      `W3D_RGB`_     SpecularColor
-12      4      `W3D_RGB`_     EmissiveCoefficients
-16      4      `W3D_RGB`_     AmbientCoefficients
-20      4      `W3D_RGB`_     DiffuseCoefficients
-24      4      `W3D_RGB`_     SpecularCoefficients
+4       4       `W3D_RGB`_     DiffuseColor
+8       4       `W3D_RGB`_     SpecularColor
+12      4       `W3D_RGB`_     EmissiveCoefficients
+16      4       `W3D_RGB`_     AmbientCoefficients
+20      4       `W3D_RGB`_     DiffuseCoefficients
+24      4       `W3D_RGB`_     SpecularCoefficients
 28      4       FLOAT32       Shininess
 32      4       FLOAT32       Opacity
 36      4       FLOAT32       Translucency
@@ -4592,11 +4610,11 @@ OBSOLETE: structure defining a single color keyframe
 Offset  Bytes   Type           Name
 ======  ======  =============  ====================
 0       4       FLOAT32        Time 
-4       4      `W3D_RGBA`_       Color
+4       4       `W3D_RGBA`_       Color
 ======  ======  =============  ====================
 
 OBSOLETE_W3D_CHUNK_EMITTER_OPACITY_KEYFRAME
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 OBSOLETE: structure defining a single opacity keyframe
 
@@ -4633,6 +4651,18 @@ Offset  Bytes  Type         Name
 8       4      FLOAT32      Z
 ======  =====  ===========  ====================
 
+
+W3D_VECTOR2
+~~~~~~~~~~~
+
+======  =====  ===========  ====================
+Offset  Bytes  Type         Name
+======  =====  ===========  ====================
+0       4      FLOAT32      X
+4       4      FLOAT32      Y
+======  =====  ===========  ====================
+
+
 W3D_VERSION
 ~~~~~~~~~~~
 
@@ -4642,7 +4672,7 @@ Offset  Bytes  Type         Name
 0       4       UINT32      Version
 ======  =====  ===========  ====================
 
-* **Version**: Each Major chunk type will contain a "header" as its first
+**Version**: Each Major chunk type will contain a "header" as its first
 sub-chunk.  The first member of this header will be a Version
 number formatted so that its major revision number is the
 high two bytes and its minor revision number is the lower two
