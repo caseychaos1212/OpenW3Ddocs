@@ -258,7 +258,7 @@ Value       Name
 0xB49       `W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_S`_
 0xB4A       `W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_T`_
 0xB4B       `W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_SXT`_
-0xB4C       `W3D_CHUNK_SHDSUBMESH_COLOR`_
+0xB4C       `W3D_CHUNK_SHDSUBMESH_VERTEX_COLOR`_
 0xB4D       `W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES`_
 0xC00       `W3D_CHUNK_SECONDARY_VERTICES`_
 0xC01       `W3D_CHUNK_SECONDARY_VERTEX_NORMALS`_
@@ -1111,9 +1111,9 @@ Offset  Bytes   Type          Name
 W3D_VERTEX_MATERIAL_FLAGS
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-==========  ==========================================  ==============
-Value       Name                                        Description
-==========  ==========================================  ==============
+==========  ==============================================  ==============
+Value       Name                                            Description
+==========  ==============================================  ==============
 0x1         W3DVERTMAT_USE_DEPTH_CUE                       
 0x2         W3DVERTMAT_ARGB_EMISSIVE_ONLY 
 0x4         W3DVERTMAT_COPY_SPECULAR_TO_DIFFUSE                       
@@ -1170,7 +1170,7 @@ Value       Name                                        Description
 0x3000000   W3DVERTMAT_PSX_TRANS_25 
 0x4000000   W3DVERTMAT_PSX_TRANS_MINUS_100 
 0x8000000   W3DVERTMAT_PSX_NO_RT_LIGHTING
-==========  ==========================================  ==============
+==========  ==============================================  ==============
 
 W3D_CHUNK_VERTEX_MAPPER_ARGS0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1470,11 +1470,11 @@ W3D_CHUNK_STAGE_TEXCOORDS
 
 Per-vertex texture coordinates.
 
-======  ======  ============    ====================
-Offset  Bytes   Type            Name
-======  ======  ============    ====================
-0       8 * N  `W3D_TEXCOORD`_  Vertex UV
-======  ======  ============    ====================
+======  ======  ==============    ====================
+Offset  Bytes   Type                Name
+======  ======  ==============    ====================
+0       8 * N  `W3D_TEXCOORD`_      Vertex UV
+======  ======  ==============    ====================
 
 
 ``N`` is the number of vertices in `W3D_CHUNK_MESH_HEADER3`_.
@@ -1949,9 +1949,9 @@ Contains a Pivot Structure for each node in the tree.
 Contains a ROOTRANSFORM node at index -1: 
 0xffffffff = root pivot; no parent
 
-======  ======  ================  ====================
+======  ======  =================  ====================
 Offset  Bytes   Type                Name
-======  ======  ================  ====================
+======  ======  =================  ====================
 0       16      CHAR[16]            Name
 16      4       UINT32              ParentIDx
 20      12      `W3D_VECTOR3`_      Translation
@@ -2845,19 +2845,19 @@ W3D_CHUNK_EMITTER_INFO
 Generic particle emitter definition.
 
 ======  ======  ==============  ====================
-Offset  Bytes   Type           Name
+Offset  Bytes   Type            Name
 ======  ======  ==============  ====================
-0       260     CHAR[260]      TextureFilename
-260     4       FLOAT32        StartSize
-264     4       FLOAT32        EndSize
-268     4       FLOAT32        Lifetime
-272     4       FLOAT32        EmissionRate
-276     4       FLOAT32        MaxEmissions
-280     4       FLOAT32        VelocityRandom
-284     4       FLOAT32        PositionRandom
-288     4       FLOAT32        FadeTime
-292     4       FLOAT32        Gravity
-296     4       FLOAT32        Elasticity
+0       260     CHAR[260]       TextureFilename
+260     4       FLOAT32         StartSize
+264     4       FLOAT32         EndSize
+268     4       FLOAT32         Lifetime
+272     4       FLOAT32         EmissionRate
+276     4       FLOAT32         MaxEmissions
+280     4       FLOAT32         VelocityRandom
+284     4       FLOAT32         PositionRandom
+288     4       FLOAT32         FadeTime
+292     4       FLOAT32         Gravity
+296     4       FLOAT32         Elasticity
 308     12      `W3D_VECTOR3`_  Velocity
 320     12      `W3D_VECTOR3`_  Acceleration
 324     4       `W3D_RGB`_      StartColor
@@ -3181,7 +3181,7 @@ X       32      CHAR[32]                    BonePath[14]
 X       260     CHAR[260]                   OldTextureName
 X       260     CHAR[260]                   NewTextureName
 X       12      `W3D_CHUNK_TEXTURE_INFO`_   TextureParams
-======  ======  =========================   ====================
+======  ======  ========================   ====================
 
 * **ReplacedTextureCount**: 
 * **MeshPath**: 
@@ -3393,9 +3393,9 @@ Offset  Bytes   Type              Name
 W3D_BOX_FLAGS
 ~~~~~~~~~~~~~~
 
-==========  ==========================================  ===========================================
-Value       Name                                        Description
-==========  ==========================================  ===========================================
+==========  ============================================  ===========================================
+Value       Name                                          Description
+==========  ============================================  ===========================================
 0x1         W3D_BOX_ATTRIBUTE_ORIENTED                    WorldBox                         
 0x2         W3D_BOX_ATTRIBUTE_ALIGNED                     Bounding Box                
 0xFF0       W3D_BOX_ATTRIBUTE_COLLISION_TYPE_MASK         Mask for the collision type bits                
@@ -3405,7 +3405,7 @@ Value       Name                                        Description
 0x40        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VIS          Vis rays collide with this mesh
 0x80        W3D_BOX_ATTRIBTUE_COLLISION_TYPE_CAMERA       Cameras collide with this mesh   
 0x100       W3D_BOX_ATTRIBTUE_COLLISION_TYPE_VEHICLE      Vehicles collide with this mesh
-==========  ==========================================  ===========================================
+==========  ============================================  ===========================================
 
 W3D_CHUNK_SPHERE
 ~~~~~~~~~~~~~~~~~
@@ -3506,12 +3506,12 @@ Offset  Bytes   Type              Name
 
 CHUNKID_VARIABLES		= 0x03150809
 
-======  ======  ==================     ====================
-Offset  Bytes   Type                    Name
-======  ======  ==================     ====================
-0       20     `W3D_ALPHA_VECTOR`_      Value
-20      4       FLOAT32                 Time                      
-======  ======  ==================     ====================
+======  ======  ===================     ====================
+Offset  Bytes   Type                      Name
+======  ======  ===================     ====================
+0       20      `W3D_ALPHA_VECTOR`_      Value
+20      4       FLOAT32                   Time                      
+======  ======  ===================     ====================
 
 
 W3D_SPHERE_FLAGS
@@ -4125,7 +4125,7 @@ GENERALS: per-vertex texture coordinates
 Offset  Bytes   Type                Name
 ======  ======  ===============    ====================
 0       8 * N   `W3D_TEXCOORD`_      Vertex UV
-======  ======  ===============   ====================
+======  ======  ===============    ====================
 
 * **Vertex UV**:
 
