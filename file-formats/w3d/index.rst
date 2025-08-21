@@ -3171,13 +3171,9 @@ Offset  Bytes   Type                        Name
 Offset  Bytes   Type                        Name
 ======  ======  =========================   ====================
 X       32      CHAR[32]                    MeshPath[0]
----------------------------------------------------------------
 X       32      CHAR[32]                    MeshPath[14]
-------------------------------------------------------
 X       32      CHAR[32]                    BonePath[0]
-------------------------------------------------------
 X       32      CHAR[32]                    BonePath[14]
-------------------------------------------------------
 X       260     CHAR[260]                   OldTextureName
 X       260     CHAR[260]                   NewTextureName
 X       12      `W3D_CHUNK_TEXTURE_INFO`_   TextureParams
