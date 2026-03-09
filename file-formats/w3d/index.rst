@@ -725,7 +725,7 @@ permutations are currently known:
 2. At least one BFME-era variant reused the same chunk ID for two bone indices
    plus two weights; current ``max2w3d`` writes this layout and it was later
    backported to TT.
-3. Recent TT/OpenW3D work added the separate
+3. Recent TT work added the separate
    `W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED`_ chunk for up to four bone
    influences.
 
@@ -759,13 +759,12 @@ Offset  Bytes   Type          Name
 * **BoneIndex**: Up to two bone IDs affecting the vertex.
 * **Weight**: Per-bone weights written by the exporter.
 
-Current TT/OpenW3D ``max2w3d`` uses this chunk for the regular smooth-skin
-path.
+Current TT ``max2w3d`` uses this chunk for the regular smooth-skin path.
 
 W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Recent TT/OpenW3D supersmooth-skin extension used when
+Recent TT supersmooth-skin extension used when
 ``W3D_VERTEX_CHANNEL_SUPERSMOOTHSKIN`` is set.
 
 For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
@@ -4397,9 +4396,16 @@ Offset  Bytes   Type                  Name
 
 W3D_CHUNK_LIGHTMAP_UV
 ~~~~~~~~~~~~~~~~~~~~~
-BFME II: 
 
+TT/OpenW3D experimental chunk ID for a lightmap UV stream.
 
+This does not appear to be a documented BFME II chunk. In the local TT
+``max2w3d`` sources it is only present as the ``0xC02`` enum value, and no
+active loader, dumper, or exporter implementation was found in the current
+``max2w3d`` or OpenW3D code trees.
+
+It appears to have been reserved for a TT lightmapping-related project that
+never shipped, so the exact payload layout is currently unknown.
 
 OBSOLETE:
 ---------
