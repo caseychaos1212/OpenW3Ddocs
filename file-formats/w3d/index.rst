@@ -17,6 +17,26 @@ In OpenW3D tooling, ``.wlt``, ``.wht``, ``.wha``, and ``.wtm`` are treated as
 the same chunk-based W3D binary format (different extensions, same structure).
 In practice, ``.wlt`` is the one most commonly encountered.
 
+For Renegade, Tiberian Technologies (TT) produced a reverse-engineered
+continuation of the original engine and toolchain. In community usage this is
+usually discussed in terms of ``Scripts 4.x`` and ``Scripts 5.x``:
+
+* ``Scripts 4.x`` aims to remain feature-compatible with the original
+  Renegade engine.
+* ``Scripts 5.x`` is an extended branch used to support larger engine changes
+  and total-conversion projects.
+
+OpenW3D is a separate project based on the released source code later made
+available by EA.
+
+The Generals-era games and later SAGE titles use updated descendants of the
+original W3D technology developed by Westwood and/or EA, so some structures
+and chunk usage differ between branches.
+
+Many W3D chunks contain a file or chunk ``Version`` field. That internal
+Westwood versioning should not be confused with TT ``Scripts 4.x`` / ``5.x``
+release naming.
+
 Later SAGE games (C&C3 and RA3) used an XML-based evolution of the w3d format called w3x.
 
 This document was adapted from the OPENSAGE READTHEDOCS It was added to by Casey Williams for use for Renegade based W3D projects.
@@ -698,8 +718,34 @@ W3D_CHUNK_VERTEX_INFLUENCES
 
 Mesh deformation vertex connections.
 
-In ``max2w3d`` this chunk is written as ``W3dVertInfStruct`` and stores up to
-two bone indices plus two weights per vertex.
+This chunk ID has been used with multiple incompatible layouts. Three
+permutations are currently known:
+
+1. The original Westwood/OpenW3D spec uses a single bone index plus padding.
+2. At least one BFME-era variant reused the same chunk ID for two bone indices
+   plus two weights; current ``max2w3d`` writes this layout and it was later
+   backported to TT.
+3. Recent TT/OpenW3D work added the separate
+   `W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED`_ chunk for up to four bone
+   influences.
+
+Original Westwood/OpenW3D layout:
+
+For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
+
+======  ======  ============  ====================
+Offset  Bytes   Type          Name
+======  ======  ============  ====================
+0       2       UINT16        BoneIndex
+2       6       UINT8[6]      Padding
+======  ======  ============  ====================
+
+* **BoneIndex**: ID of the bone influencing the vertex.
+* **Padding**: Unused padding bytes.
+
+This is the layout documented in the original OpenW3D headers.
+
+BFME/max2w3d/TT reused layout:
 
 For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
 
@@ -713,12 +759,13 @@ Offset  Bytes   Type          Name
 * **BoneIndex**: Up to two bone IDs affecting the vertex.
 * **Weight**: Per-bone weights written by the exporter.
 
-WWSKIN uses this chunk for the regular smooth-skin path.
+Current TT/OpenW3D ``max2w3d`` uses this chunk for the regular smooth-skin
+path.
 
 W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TT/OpenW3D supersmooth-skin extension used when
+Recent TT/OpenW3D supersmooth-skin extension used when
 ``W3D_VERTEX_CHANNEL_SUPERSMOOTHSKIN`` is set.
 
 For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
@@ -788,7 +835,7 @@ Value       Name
 21          Electrical
 22          Flammable
 23          Steam
-24          EletricalPermeable
+24          ElectricalPermeable
 25          FlammablePermeable
 26          SteamPermeable
 27          WaterPermeable
@@ -797,6 +844,33 @@ Value       Name
 30          UnderwaterDirt
 31          UnderwaterTiberiumDirt
 ==========  ==========================
+
+The original Westwood/OpenW3D enum stops at value ``31``. Current
+TT/OpenW3D ``max2w3d`` adds the following surface types:
+
+==========  ==========================
+Value       TT/max2w3d name
+==========  ==========================
+32          BlueTiberium
+33          RedTiberium
+34          TiberiumVeins
+35          Laser
+36          SnowPermeable
+37          ElectricalGlass
+38          ElectricalGlassPermeable
+39          Slush
+40          Extra1
+41          Extra2
+42          Extra3
+43          Extra4
+44          Extra5
+45          Extra6
+46          Extra7
+47          Extra8
+==========  ==========================
+
+In ``max2w3d/scripts/w3d.h``, ``SnowPermeable`` is spelled
+``SNOW_PERMIABLE``.
 
 W3D_CHUNK_VERTEX_SHADE_INDICES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1177,7 +1251,7 @@ Value       Name                                            Description
 0x700       W3DVERTMAT_STAGE1_MAPPING_GRID 
 0x800       W3DVERTMAT_STAGE1_MAPPING_ROTATE
 0x900       W3DVERTMAT_STAGE1_MAPPING_SINE_LINEAR_OFFSET
-0xA00       W3DVERTMAT_STAGE1_MAPPING_ZIGZAG_LINEAR_OFFSET
+0xA00       W3DVERTMAT_STAGE1_MAPPING_STEP_LINEAR_OFFSET
 0xB00       W3DVERTMAT_STAGE1_MAPPING_ZIGZAG_LINEAR_OFFSET
 0xC00       W3DVERTMAT_STAGE1_MAPPING_WS_CLASSIC_ENV
 0xD00       W3DVERTMAT_STAGE1_MAPPING_WS_ENVIRONMENT 
@@ -1197,10 +1271,23 @@ Value       Name                                            Description
 0x8000000   W3DVERTMAT_PSX_NO_RT_LIGHTING
 ==========  ==============================================  ==============
 
+OpenW3D currently instantiates mapper classes for the UV, environment,
+cheap-environment, screen, linear-offset, scale, grid, rotate,
+sine-linear-offset, step-linear-offset, zigzag-linear-offset,
+world-space classic environment, world-space environment,
+grid-classic-environment, grid-environment, random, edge, and bump-env
+flags. ``W3DVERTMAT_STAGE*_MAPPING_SILHOUETTE`` is still unimplemented in
+the DX8 renderer, and TT/``max2w3d`` also defines
+``W3DVERTMAT_STAGE*_MAPPING_GRID_WS_CLASSIC_ENV`` and
+``W3DVERTMAT_STAGE*_MAPPING_GRID_WS_ENVIRONMENT`` without corresponding
+cases in ``OpenW3D/Code/ww3d2/vertmaterial.cpp``.
+
 W3D_CHUNK_VERTEX_MAPPER_ARGS0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Arguments for the first stage mapping (null-terminated, line-break-separated string).
+OpenW3D prepends ``[Args]`` and parses the payload as INI-style ``key=value``
+lines.
 
 ======  ==========  =======  ===========
 Offset  Bytes       Type     Name
@@ -1214,6 +1301,8 @@ W3D_CHUNK_VERTEX_MAPPER_ARGS1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Arguments for the second stage mapping (null-terminated, line-break-separated string).
+OpenW3D parses it using the same INI-style format as
+`W3D_CHUNK_VERTEX_MAPPER_ARGS0`_.
 
 ======  ==========  =======  ===========
 Offset  Bytes       Type     Name
@@ -1222,6 +1311,47 @@ Offset  Bytes       Type     Name
 ======  ==========  =======  ===========
 
 * **ARGS1**: Argument for the second texture stage.
+
+OpenW3D mapper arg keys
+~~~~~~~~~~~~~~~~~~~~~~~
+
+These chunks are only meaningful when the matching
+``W3DVERTMAT_STAGE0_MAPPING_*`` or ``W3DVERTMAT_STAGE1_MAPPING_*`` flag
+selects a mapper that actually consumes args.
+
+Example payload::
+
+  UPerSec=0.5
+  VPerSec=0.0
+  UScale=1.0
+  VScale=1.0
+
+Valid keys in current OpenW3D are:
+
+* ``*_MAPPING_UV``, ``*_MAPPING_ENVIRONMENT``,
+  ``*_MAPPING_CHEAP_ENVIRONMENT``, ``*_MAPPING_WS_CLASSIC_ENV``, and
+  ``*_MAPPING_WS_ENVIRONMENT``: no keys are read.
+* ``*_MAPPING_LINEAR_OFFSET`` and ``*_MAPPING_SCREEN``: ``UPerSec``,
+  ``VPerSec``, ``UScale``, ``VScale``.
+* ``*_MAPPING_SCALE``: ``UScale``, ``VScale``.
+* ``*_MAPPING_GRID``, ``*_MAPPING_GRID_CLASSIC_ENV``, and
+  ``*_MAPPING_GRID_ENVIRONMENT``: ``FPS``, ``Log2Width``, ``Last``.
+* ``*_MAPPING_ROTATE``: ``Speed``, ``UCenter``, ``VCenter``, ``UScale``,
+  ``VScale``.
+* ``*_MAPPING_SINE_LINEAR_OFFSET``: ``UAmp``, ``UFreq``, ``UPhase``,
+  ``VAmp``, ``VFreq``, ``VPhase``.
+* ``*_MAPPING_STEP_LINEAR_OFFSET``: ``UStep``, ``VStep``, ``SPS``.
+* ``*_MAPPING_ZIGZAG_LINEAR_OFFSET``: ``UPerSec``, ``VPerSec``, ``Period``.
+* ``*_MAPPING_RANDOM``: ``FPS``, ``UPerSec``, ``VPerSec``.
+* ``*_MAPPING_EDGE``: ``VPerSec``, ``VStart``, ``UseReflect``.
+* ``*_MAPPING_BUMPENV``: ``BumpRotation``, ``BumpScale``, plus inherited
+  ``UPerSec``, ``VPerSec``, ``UScale``, ``VScale``.
+
+OpenW3D currently has no arg parser path for
+``W3DVERTMAT_STAGE*_MAPPING_SILHOUETTE``. TT/``max2w3d`` also defines
+``W3DVERTMAT_STAGE*_MAPPING_GRID_WS_CLASSIC_ENV`` and
+``W3DVERTMAT_STAGE*_MAPPING_GRID_WS_ENVIRONMENT``, but no corresponding
+OpenW3D loader case was found.
 
 
 W3D_CHUNK_TEXTURES
@@ -2285,6 +2415,7 @@ Hierarchy morphing animation data (morphs between poses, for facial animation)
 
 
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2326,6 +2457,7 @@ W3D_CHUNK_MORPHANIM_CHANNEL
 
 Wrapper for a channel
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2390,6 +2522,7 @@ Blueprint for a hierarchy model
 	bones in a hierarchy tree.  There can be multiple objects per node
 	in the tree.  Or there may be no objects attached to a particular bone.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2490,6 +2623,7 @@ ordered in terms of their expected rendering costs. (highest is first)
 	An LOD Model is a set of render objects which are interchangeable and
 	designed to be different resolution versions of the same object.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2548,6 +2682,7 @@ Collection of render object names
 	contain a string chunk for the name of each render object in the collection.
 	A collection may also contain a "Snap Points" chunk.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2667,6 +2802,7 @@ W3D_CHUNK_LIGHT
 
 Description of a light
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -2812,6 +2948,7 @@ W3D_CHUNK_EMITTER
 
 Description of a particle emitter.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3127,6 +3264,7 @@ The following structs are used to define aggregates in the w3d file.  An
 'aggregate' is simply a 'shell' that contains references to a hierarchy
 model and subobjects to attach to its bones.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3245,6 +3383,7 @@ Description of an HLOD object.
 	which can be used for application purposes such as instantiating game objects
 	at the specified transform. 
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3284,6 +3423,7 @@ W3D_CHUNK_HLOD_LOD_ARRAY
 
 Wrapper around the array of objects for each level of detail.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3330,6 +3470,7 @@ Offset  Bytes   Type              Name
 W3D_CHUNK_HLOD_AGGREGATE_ARRAY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3344,6 +3485,7 @@ It is a container chunk that can contain these sub-chunks:
 W3D_CHUNK_HLOD_PROXY_ARRAY
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3360,6 +3502,7 @@ W3D_CHUNK_HLOD_LIGHT_ARRAY
 
 TT: array of lights, used for application-defined purposes, provides a name and a bone. (5.0)
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3699,6 +3842,7 @@ W3D_CHUNK_LIGHTSCAPE
 
 Wrapper for lights created with Lightscape.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3743,6 +3887,7 @@ W3D_CHUNK_DAZZLE
 
 Wrapper for a glare object.  Creates halos and flare lines seen around a bright light source
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3924,6 +4069,7 @@ GENERALS: "Shader mesh" Mesh with multiple sub-meshes that use the scaleable sha
 
 These are also seen in the Renegade 2 assets.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -3996,6 +4142,7 @@ W3D_CHUNK_SHDSUBMESH
 ~~~~~~~~~~~~~~~~~~~~
 GENERALS: wrapper around an individual sub-mesh.
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
@@ -4048,6 +4195,7 @@ W3D_CHUNK_SHDSUBMESH_SHADER
 
 GENERALS: wrapper around a Shader
 
+======  =====  =======  ===========
 Offset  Bytes  Type     Name
 ======  =====  =======  ===========
 0       4      UINT32   ChunkType
