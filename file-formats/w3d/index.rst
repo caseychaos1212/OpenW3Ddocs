@@ -13,6 +13,10 @@ Description
 * BFME I
 * BFME II
 
+In OpenW3D tooling, ``.wlt``, ``.wht``, ``.wha``, and ``.wtm`` are treated as
+the same chunk-based W3D binary format (different extensions, same structure).
+In practice, ``.wlt`` is the one most commonly encountered.
+
 Later SAGE games (C&C3 and RA3) used an XML-based evolution of the w3d format called w3x.
 
 This document was adapted from the OPENSAGE READTHEDOCS It was added to by Casey Williams for use for Renegade based W3D projects.
@@ -263,7 +267,24 @@ Value       Name
 0xC00       `W3D_CHUNK_SECONDARY_VERTICES`_
 0xC01       `W3D_CHUNK_SECONDARY_VERTEX_NORMALS`_
 0xC02       `W3D_CHUNK_LIGHTMAP_UV`_
+0xC03       `W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED`_
 ==========  ==========================
+
+Header aliases
+~~~~~~~~~~~~~~
+
+The ``max2w3d/scripts/w3dobsolete.h`` header uses a few alternate names for
+chunk IDs already documented on this page:
+
+* ``W3D_CHUNK_FXSHADER_IDS`` -> `W3D_CHUNK_SHADER_MATERIAL_ID`_
+* ``W3D_CHUNK_FX_SHADERS`` -> `W3D_CHUNK_SHADER_MATERIALS`_
+* ``W3D_CHUNK_FX_SHADER`` -> `W3D_CHUNK_SHADER_MATERIAL`_
+* ``W3D_CHUNK_FX_SHADER_INFO`` -> `W3D_CHUNK_SHADER_MATERIAL_HEADER`_
+* ``W3D_CHUNK_FX_SHADER_CONSTANT`` -> `W3D_CHUNK_SHADER_MATERIAL_PROPERTY`_
+* ``W3D_CHUNK_BINORMALS`` -> `W3D_CHUNK_BITANGENTS`_
+* ``W3D_CHUNK_SHDSUBMESH_SHADER_TYPE`` -> `W3D_CHUNK_SHDSUBMESH_SHADER_CLASSID`_
+* ``W3D_CHUNK_SHDSUBMESH_SHADER_DATA`` -> `W3D_CHUNK_SHDSUBMESH_SHADER_DEF`_
+* ``W3D_CHUNK_SHDSUBMESH_B4C`` -> `W3D_CHUNK_SHDSUBMESH_VERTEX_COLOR`_
 
 Chunks and sub-chunks appear in ``.w3d`` files in the following hierarchy:
 
@@ -275,6 +296,7 @@ Chunks and sub-chunks appear in ``.w3d`` files in the following hierarchy:
   * `W3D_CHUNK_SECONDARY_VERTEX_NORMALS`_
   * `W3D_CHUNK_MESH_USER_TEXT`_
   * `W3D_CHUNK_VERTEX_INFLUENCES`_
+  * `W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED`_
   * `W3D_CHUNK_MESH_HEADER3`_
   * `W3D_CHUNK_TRIANGLES`_
   * `W3D_CHUNK_VERTEX_SHADE_INDICES`_
@@ -676,38 +698,41 @@ W3D_CHUNK_VERTEX_INFLUENCES
 
 Mesh deformation vertex connections.
 
-For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
-
-======  ======  ============  ====================
-Offset  Bytes   Type          Name
-======  ======  ============  ====================
-0       2       UINT16        BoneIndex
-2       6       UINT8[6]      Padding
-======  ======  ============  ====================
-
-* **BoneIndex**: ID of the bone in which the vertex is influenced.
-* **Padding**: Evens out the data structure.
-
-WWSKIN only allows 1 bone per vertex.
-
-**TODO**: Does BFME have a second bone index, and bone weights?
-
-TT_W3D_VERTEX_INFLUENCE
-~~~~~~~~~~~~~~~~~~~~~~~
-
-TT: Added Max Skin Support which now allows two bone weights
+In ``max2w3d`` this chunk is written as ``W3dVertInfStruct`` and stores up to
+two bone indices plus two weights per vertex.
 
 For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
 
 ======  ======  ============  ====================
 Offset  Bytes   Type          Name
 ======  ======  ============  ====================
-0       4       UINT16[2]        BoneIndex
-4       4       UINT16[2]        Weight
+0       4       UINT16[2]     BoneIndex
+4       4       UINT16[2]     Weight
 ======  ======  ============  ====================
 
-* **BoneIndex**: ID of the bone in which the vertex is influenced up to two Bones.
-* **Weight**: Weight of each bone on the vertex.
+* **BoneIndex**: Up to two bone IDs affecting the vertex.
+* **Weight**: Per-bone weights written by the exporter.
+
+WWSKIN uses this chunk for the regular smooth-skin path.
+
+W3D_CHUNK_VERTEX_INFLUENCES_EXTENDED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TT/OpenW3D supersmooth-skin extension used when
+``W3D_VERTEX_CHANNEL_SUPERSMOOTHSKIN`` is set.
+
+For Each Vertex specifed in the `W3D_CHUNK_MESH_HEADER3`_ chunk.
+
+======  ======  ============  ====================
+Offset  Bytes   Type          Name
+======  ======  ============  ====================
+0       8       UINT16[4]     BoneIndex
+8       6       UINT16[3]     Weight
+======  ======  ============  ====================
+
+* **BoneIndex**: Up to four bone IDs affecting the vertex.
+* **Weight**: First three 16-bit weights. The fourth weight is derived as
+  ``65535 - (w0 + w1 + w2)`` and clamped at zero.
 
 
 W3D_CHUNK_TRIANGLES
@@ -4182,6 +4207,8 @@ W3D_CHUNK_SHDSUBMESH_VERTEX_COLOR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GENERALS: per-vertex color
+
+Also Known as ``W3D_CHUNK_SHDSUBMESH_B4C``
 
 W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
