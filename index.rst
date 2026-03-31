@@ -7,4 +7,5 @@ A place where we gather knowledge around the W3D game engine. Feel free to contr
    :maxdepth: 2
    :caption: Documentation
 
+   animations/index
    file-formats/index
