@@ -7,3 +7,5 @@ Reference pages for animation inventories and naming.
    :maxdepth: 1
 
    a-skeleton
+   b-skeleton
+   c-skeleton
