@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scripts": {
+    "M00_Action": {
+      "summary": "Configurable movement and attack controller that can start immediately or in response to a custom event."
+    },
+    "M00_Debug_Text_File_RMV": {
+      "summary": "Writes a text log of object lifecycle, combat, and custom-event activity for debugging attached scripts."
+    },
+    "M00_Object_Create_RMV": {
+      "summary": "Creates a configured object immediately or after receiving a matching custom event."
+    },
+    "M00_Sound_Play_2D_RAD": {
+      "summary": "Plays a configured 2D sound immediately or in response to a custom event, with optional repeats and delays."
+    },
+    "M00_Trigger_When_Killed_RMV": {
+      "summary": "Sends a custom event when the host object is enabled and a kill condition is reached."
+    }
+  }
+}
