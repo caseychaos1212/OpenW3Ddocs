@@ -11,6 +11,10 @@ In OpenW3D, ``.ddb`` is written/read through the shared SaveLoad framework and
 stores definitions. LevelEdit preset databases also contain editor preset data;
 ``SaveGameManager::Save_Definitions`` writes only the definition subsystem.
 
+For how definitions become editor presets and runtime objects, see
+:doc:`/presets/index`. That chapter explains class IDs versus definition IDs,
+parent copying and propagation, dependency collection, and factory dispatch.
+
 References
 ----------
 

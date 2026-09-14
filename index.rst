@@ -9,4 +9,5 @@ A place where we gather knowledge around the W3D game engine. Feel free to contr
 
    animations/index
    file-formats/index
+   presets/index
    scripts/index
