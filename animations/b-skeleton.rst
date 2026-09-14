@@ -38,4 +38,7 @@ or pose variants on the same base locomotion name.
 The notes below combine naming-pattern descriptions with explicit OpenW3D
 source references when a clip is named in code.
 
+Source review: `HumanStateClass naming <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Combat/humanstate.cpp>`_
+and `HumanAnimControlClass skeleton remapping <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Combat/animcontrol.cpp>`_.
+
 .. include:: generated/b-skeleton-gallery.rst

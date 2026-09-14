@@ -2,7 +2,7 @@ Test_DAY.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``13``
+* Indexed registrations: ``13``
 * Source: ``Code/Scripts/Test_DAY.cpp``
 
 DAY_TestScriptOne

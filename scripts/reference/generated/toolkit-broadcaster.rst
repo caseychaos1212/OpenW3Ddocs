@@ -2,7 +2,7 @@ Toolkit_Broadcaster.cpp
 =======================
 
 * Category: ``toolkit``
-* Active scripts: ``3``
+* Indexed registrations: ``3``
 * Source: ``Code/Scripts/Toolkit_Broadcaster.cpp``
 
 M00_Broadcaster_Activator_RAD
@@ -28,13 +28,13 @@ Source Notes::
 
      Parameters:
 
-     Terminal_ID	= The ID of the terminal you wish to register with.
-     Prompt_Value	= The prompt value you wish to send to the terminal before the custom.
+     Terminal_ID        = The ID of the terminal you wish to register with.
+     Prompt_Value       = The prompt value you wish to send to the terminal before the custom.
 
-     0	= Object is sending a custom that should be sent to everyone with one parameter.
-     1	= Object is sending a custom that should be sent to random objects with one parameter.
-     2	= Object is sending a custom that should be sent to everyone with random parameter.
-     3	= Object is sending a custom that should be sent to random objects with random parameter.
+     0  = Object is sending a custom that should be sent to everyone with one parameter.
+     1  = Object is sending a custom that should be sent to random objects with one parameter.
+     2  = Object is sending a custom that should be sent to everyone with random parameter.
+     3  = Object is sending a custom that should be sent to random objects with random parameter.
 
      Script activates upon receipt of a custom. Defaults to constant send, 0.
 
@@ -61,10 +61,10 @@ Source Notes::
 
      Parameters:
 
-     Terminal_ID	= The ID of the terminal you wish to register with.
-     Send_Attempts	= The number of attempts to send to the terminal this will make before failing.
-     Send_Delay	= The delay between attempts to send.
-     Debug_Mode	= Turn this on if debug information is needed.
+     Terminal_ID        = The ID of the terminal you wish to register with.
+     Send_Attempts      = The number of attempts to send to the terminal this will make before failing.
+     Send_Delay = The delay between attempts to send.
+     Debug_Mode = Turn this on if debug information is needed.
 
      Custom:
 
@@ -80,7 +80,7 @@ This script is a terminal, which transfers customs to other objects. It can stor
 * Source line: ``168``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
-* Key engine calls: ``Get_ID``, ``Get_Random``, ``Find_Object``, ``Send_Custom_Event``
+* Key engine calls: ``Get_ID``, ``Get_Random_Int``, ``Find_Object``, ``Send_Custom_Event``
 * Summary source: ``source comment``
 
 Parameter Description::
@@ -96,26 +96,26 @@ Source Notes::
 
      Values:
 
-     object_specific_record	= Storage of each registry item one at a time.
-     object_random_record		= Storage of any registry item as many times as desired.
-     object_prompts			= Storage of any sent prompts from objects.
-   	0 = Object ID that is prompting.
-   	1 = custom type to send with next regular custom.
+     object_specific_record     = Storage of each registry item one at a time.
+     object_random_record               = Storage of any registry item as many times as desired.
+     object_prompts                     = Storage of any sent prompts from objects.
+        0 = Object ID that is prompting.
+        1 = custom type to send with next regular custom.
 
      Parameters:
 
-     Random_Percentage	= Number from 1 to 99 to determine chance of sending the custom.
-     Random_Param_Min	= Minimum random parameter for random sends.
-     Random_Param_Max	= Maximum random parameter for random sends.
+     Random_Percentage  = Number from 1 to 99 to determine chance of sending the custom.
+     Random_Param_Min   = Minimum random parameter for random sends.
+     Random_Param_Max   = Maximum random parameter for random sends.
 
      M00_CUSTOM_BROADCASTER_REGISTRATION
      M00_CUSTOM_BROADCASTER_PROMPTER
 
      Prompt Parameters:
 
-     0	= Object is sending a custom that should be sent to everyone with one parameter.
-     1	= Object is sending a custom that should be sent to random objects with one parameter.
-     2	= Object is sending a custom that should be sent to everyone with random parameter.
-     3	= Object is sending a custom that should be sent to random objects with random parameter.
+     0  = Object is sending a custom that should be sent to everyone with one parameter.
+     1  = Object is sending a custom that should be sent to random objects with one parameter.
+     2  = Object is sending a custom that should be sent to everyone with random parameter.
+     3  = Object is sending a custom that should be sent to random objects with random parameter.
 
      Script activates upon receipt of a custom.

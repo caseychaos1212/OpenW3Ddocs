@@ -2,7 +2,7 @@ Test_GTH.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``12``
+* Indexed registrations: ``12``
 * Source: ``Code/Scripts/Test_GTH.cpp``
 
 GTH_Create_Object_On_Enter
@@ -99,7 +99,7 @@ GTH_CTF_Object2
 GTH_CTF_Object This script will make the object it is attached to behave kind of like a CTF "flag" by
 
 * Source line: ``871``
-* Event hooks: ``Created``, ``Damaged``, ``Timer_Expired``, ``Poked``
+* Event hooks: ``Created``, ``Damaged``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Position``, ``Start_Timer``, ``Get_Player_Type``, ``Set_Position``, ``Find_Object``, ``Send_Custom_Event``, ``Get_ID``, ``Attach_To_Object_Bone``
 * Summary source: ``source comment``

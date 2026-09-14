@@ -2,7 +2,7 @@ Test_RMV_Toolkit.cpp
 ====================
 
 * Category: ``test-and-prototype``
-* Active scripts: ``9``
+* Indexed registrations: ``8``
 * Source: ``Code/Scripts/Test_RMV_Toolkit.cpp``
 
 M00_Play_Sound
@@ -18,80 +18,24 @@ M00_Play_Sound in Test_RMV_Toolkit.cpp initializes behavior when the object is c
 
 Parameter Description::
 
-   Sound_Preset:string, Is_3D=1:int, Offset:vector3, Offset_Randomness:vector3, Frequency_Min=-1:float, 
+   Sound_Preset:string, Is_3D=1:int, Offset:vector3, Offset_Randomness:vector3, Frequency_Min=-1:float,
    Frequency_Max:float
 
 RMV_Building_Engineer_Controller
 --------------------------------
 
-DECLARE_SCRIPT(RMV_Engineer_Wander_Terminal, "Animation_Name:string, Custom_Type:int, Custom_Param_1:int, Custom_Param_2:int") {
+RMV_Building_Engineer_Controller in Test_RMV_Toolkit.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; sends custom events.
 
 * Source line: ``291``
 * Event hooks: ``Created``, ``Killed``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Debug_Message``, ``Find_Object``, ``Send_Custom_Event``, ``Get_Position``, ``Create_Logical_Sound``
-* Summary source: ``source comment``
+* Summary source: ``heuristic``
 
 Parameter Description::
 
-   Killed_Broadcast_Radius:float, 25_Start_ID:int, 25_Number:int, 50_Start_ID:int, 50_Number:int, 
+   Killed_Broadcast_Radius:float, 25_Start_ID:int, 25_Number:int, 50_Start_ID:int, 50_Number:int,
    75_Start_ID:int, 75_Number:int, Building_Number:int
-
-Source Notes::
-
-   DECLARE_SCRIPT(RMV_Engineer_Wander_Terminal, "Animation_Name:string, Custom_Type:int, Custom_Param_1:int, Custom_Param_2:int")
-   {
-   	enum {ENGINEER_WANDER_TIMER};
-
-   	bool i_am_occupied;
-   	Vector3 mypos;
-   	int c_type, c_param_1, c_param_2;
-
-   	REGISTER_VARIABLES()
-   	{
-   		SAVE_VARIABLE(i_am_occupied, 1);
-   		SAVE_VARIABLE(mypos, 2);
-   		SAVE_VARIABLE(c_type, 3);
-   		SAVE_VARIABLE(c_param_1, 4);
-   		SAVE_VARIABLE(c_param_2, 5);
-   	}
-
-   	void Created(GameObject * obj)
-   	{
-   	//	Commands->Enable_Hibernation(obj, false);
-   		i_am_occupied = false;
-   		mypos = Commands->Get_Position(obj);
-   		c_type = Get_Int_Parameter("Custom_Type");
-   		c_param_1 = Get_Int_Parameter("Custom_Param_1");
-   		c_param_2 = Get_Int_Parameter("Custom_Param_2");
-   		Commands->Start_Timer(obj, this, 2.0f, ENGINEER_WANDER_TIMER);
-   	}
-
-   	void Timer_Expired(GameObject * obj, int timer_id)
-   	{
-   		if ((timer_id == ENGINEER_WANDER_TIMER) && (!i_am_occupied))
-   		{
-   			Commands->Create_Logical_Sound(obj, M00_SOUND_ENGINEER_WANDER, mypos, 60.0f);
-   			Commands->Start_Timer(obj, this, 2.0f, ENGINEER_WANDER_TIMER);
-   		}
-   	}
-
-   	void Custom(GameObject * obj, int type, int param, GameObject * sender)
-   	{
-   		if ((type == c_type) && (param == c_param_1) && (!i_am_occupied))
-   		{
-   			i_am_occupied = true;
-   			const char *anim;
-   			anim = Get_Parameter("Animation_Name");
-   			Commands->Send_Custom_Event(obj, sender, c_type, (int)anim);
-   		}
-   		if ((type == c_type) && (param == c_param_2) && (i_am_occupied))
-   		{
-   			i_am_occupied = false;
-   			Commands->Start_Timer(obj, this, 2.0f, ENGINEER_WANDER_TIMER);
-   		}
-   	}
-   };
 
 RMV_Engineer_Wander
 -------------------
@@ -106,23 +50,8 @@ RMV_Engineer_Wander in Test_RMV_Toolkit.cpp initializes behavior when the object
 
 Parameter Description::
 
-   Custom_Type:int, Custom_Param_1:int, Custom_Param_2:int, Building_Number:int, 
+   Custom_Type:int, Custom_Param_1:int, Custom_Param_2:int, Building_Number:int,
    Evac_Object=None:string
-
-RMV_Engineer_Wander_Terminal
-----------------------------
-
-RMV_Engineer_Wander_Terminal in Test_RMV_Toolkit.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; uses timers; sends custom events.
-
-* Source line: ``237``
-* Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
-* Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Get_Position``, ``Start_Timer``, ``Create_Logical_Sound``, ``Send_Custom_Event``
-* Summary source: ``heuristic``
-
-Parameter Description::
-
-   Animation_Name:string, Custom_Type:int, Custom_Param_1:int, Custom_Param_2:int
 
 RMV_MCT_Switcher
 ----------------
@@ -143,7 +72,7 @@ RMV_Toggled_Engineer_Target in Test_RMV_Toolkit.cpp initializes behavior when th
 * Source line: ``421``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Get_Position``, ``Create_Logical_Sound``, ``Start_Timer``, ``Send_Custom_Event``
+* Key engine calls: ``Get_Position``, ``Create_Logical_Sound``, ``Start_Timer``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 Parameter Description::

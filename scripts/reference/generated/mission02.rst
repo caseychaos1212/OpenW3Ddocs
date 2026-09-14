@@ -2,7 +2,7 @@ Mission02.cpp
 =============
 
 * Category: ``mission``
-* Active scripts: ``26``
+* Indexed registrations: ``26``
 * Source: ``Code/Scripts/Mission02.cpp``
 
 M02_Approach_Vehicle
@@ -10,7 +10,7 @@ M02_Approach_Vehicle
 
 M02_Approach_Vehicle in Mission02.cpp responds to custom events; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``4966``
+* Source line: ``4970``
 * Event hooks: ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Action_Goto``, ``Start_Timer``, ``Apply_Damage``
@@ -25,7 +25,7 @@ M02_Commando_Start
 
 M02_Commando_Start in Mission02.cpp initializes behavior when the object is created; changes inventory or weapons.
 
-* Source line: ``5309``
+* Source line: ``5313``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Give_PowerUp``
@@ -36,7 +36,7 @@ M02_Dam_MCT
 
 M02_Dam_MCT in Mission02.cpp initializes behavior when the object is created; sends custom events; controls animation playback.
 
-* Source line: ``4046``
+* Source line: ``4050``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Health``, ``Set_Health``, ``Find_Object``, ``Send_Custom_Event``, ``Grant_Key``, ``Set_Animation_Frame``
@@ -47,7 +47,7 @@ M02_Data_Disk
 
 M02_Data_Disk in Mission02.cpp responds to custom events.
 
-* Source line: ``5320``
+* Source line: ``5324``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Clear_Map_Region_By_Pos``, ``Set_HUD_Help_Text``
@@ -62,7 +62,7 @@ M02_Destroy_Objective
 
 M02_Destroy_Objective in Mission02.cpp reacts to destruction state; sends custom events; creates or destroys objects.
 
-* Source line: ``4096``
+* Source line: ``4100``
 * Event hooks: ``Killed``, ``Damaged``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``
@@ -77,7 +77,7 @@ M02_Destroy_Vehicle
 
 M02_Destroy_Vehicle in Mission02.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``5013``
+* Source line: ``5017``
 * Event hooks: ``Created``, ``Damaged``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Start_Timer``, ``Action_Goto``, ``Apply_Damage``, ``Action_Attack``
@@ -88,7 +88,7 @@ M02_Encyclopedia_Reveal
 
 M02_Encyclopedia_Reveal in Mission02.cpp responds to custom events.
 
-* Source line: ``5357``
+* Source line: ``5361``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Reveal_Encyclopedia_Vehicle``, ``Reveal_Encyclopedia_Building``, ``Set_HUD_Help_Text``
@@ -103,7 +103,7 @@ M02_GDI_Helicopter
 
 M02_GDI_Helicopter in Mission02.cpp initializes behavior when the object is created; drives AI action commands; creates or destroys objects.
 
-* Source line: ``5287``
+* Source line: ``5291``
 * Event hooks: ``Created``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Action_Goto``, ``Destroy_Object``
@@ -114,7 +114,7 @@ M02_GDI_Soldier
 
 M02_GDI_Soldier in Mission02.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; handles player poke interaction; drives AI action commands; uses timers; sends custom events; changes innate AI behavior; starts conversations.
 
-* Source line: ``4193``
+* Source line: ``4197``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Sound_Heard``, ``Action_Complete``, ``Timer_Expired``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Hibernation``, ``Innate_Disable``, ``Start_Timer``, ``Find_Object``, ``Get_Building_Power``, ``Action_Goto``, ``Get_Position``, ``Get_A_Star``
@@ -129,7 +129,7 @@ M02_Helipad
 
 M02_Helipad in Mission02.cpp reacts to destruction state; sends custom events.
 
-* Source line: ``4082``
+* Source line: ``4086``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``
@@ -140,7 +140,7 @@ M02_Mendoza
 
 M02_Mendoza in Mission02.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers; creates or destroys objects; changes innate AI behavior; starts conversations.
 
-* Source line: ``5059``
+* Source line: ``5063``
 * Event hooks: ``Created``, ``Damaged``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Health``, ``Get_Shield_Strength``, ``Innate_Disable``, ``Action_Attack``, ``Start_Timer``, ``Set_Health``, ``Set_Shield_Strength``, ``Action_Goto``
@@ -151,7 +151,7 @@ M02_Nod_Apache
 
 M02_Nod_Apache in Mission02.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``4538``
+* Source line: ``4542``
 * Event hooks: ``Created``, ``Sound_Heard``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Start_Timer``, ``Action_Attack``, ``Get_Position``, ``Get_A_Star``, ``Get_Distance``, ``Apply_Damage``
@@ -166,7 +166,7 @@ M02_Nod_Convoy_Truck
 
 M02_Nod_Convoy_Truck in Mission02.cpp reacts to destruction state; sends custom events.
 
-* Source line: ``4166``
+* Source line: ``4170``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Get_Position``
@@ -177,7 +177,7 @@ M02_Nod_Jet
 
 M02_Nod_Jet in Mission02.cpp initializes behavior when the object is created; drives AI action commands; creates or destroys objects.
 
-* Source line: ``5240``
+* Source line: ``5244``
 * Event hooks: ``Created``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Action_Goto``, ``Destroy_Object``
@@ -188,7 +188,7 @@ M02_Nod_Jet_Waypath
 
 M02_Nod_Jet_Waypath in Mission02.cpp initializes behavior when the object is created; drives AI action commands; creates or destroys objects.
 
-* Source line: ``5263``
+* Source line: ``5267``
 * Event hooks: ``Created``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Action_Goto``, ``Destroy_Object``
@@ -199,7 +199,7 @@ M02_Nod_Sakura
 
 M02_Nod_Sakura in Mission02.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers; sends custom events; creates or destroys objects.
 
-* Source line: ``4872``
+* Source line: ``4876``
 * Event hooks: ``Created``, ``Sound_Heard``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Enable_Engine``, ``Disable_Physical_Collisions``, ``Action_Goto``, ``Start_Timer``, ``Action_Attack``, ``Get_Position``, ``Get_A_Star``
@@ -229,7 +229,7 @@ M02_Nod_Vehicle
 
 M02_Nod_Vehicle in Mission02.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``4708``
+* Source line: ``4712``
 * Event hooks: ``Created``, ``Sound_Heard``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Enable_Engine``, ``Action_Attack``, ``Start_Timer``, ``Send_Custom_Event``, ``Get_Position``, ``Get_A_Star``, ``Get_Distance``
@@ -244,7 +244,7 @@ M02_Obelisk
 
 M02_Obelisk in Mission02.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; sends custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``3884``
+* Source line: ``3888``
 * Event hooks: ``Created``, ``Killed``, ``Damaged``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Building_Power``, ``Find_Object``, ``Send_Custom_Event``, ``Get_Max_Health``, ``Set_Health``, ``Stop_All_Conversations``, ``Create_Conversation``, ``Join_Conversation``
@@ -277,7 +277,7 @@ M02_Player_Vehicle
 
 M02_Player_Vehicle in Mission02.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; uses timers; sends custom events.
 
-* Source line: ``4797``
+* Source line: ``4801``
 * Event hooks: ``Created``, ``Destroyed``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Vehicle_Transitions``, ``Set_Player_Type``, ``Start_Timer``, ``Get_ID``, ``Get_Position``, ``Get_A_Star``, ``Get_Distance``, ``Apply_Damage``
@@ -292,7 +292,7 @@ M02_Power_Plant
 
 M02_Power_Plant in Mission02.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; sends custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``3960``
+* Source line: ``3964``
 * Event hooks: ``Created``, ``Killed``, ``Damaged``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Get_Max_Health``, ``Set_Health``, ``Stop_All_Conversations``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``
@@ -329,7 +329,7 @@ M02_Stationary_Vehicle
 
 M02_Stationary_Vehicle in Mission02.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events; changes innate AI behavior; starts conversations.
 
-* Source line: ``4437``
+* Source line: ``4441``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Sound_Heard``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Innate_Disable``, ``Start_Timer``, ``Get_ID``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Find_Object``

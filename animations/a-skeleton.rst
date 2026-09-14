@@ -31,7 +31,10 @@ Common leg-style suffixes include:
 * ``B1`` to ``B4`` walk
 * ``C0`` to ``C6`` crouch and crouch-move
 * ``J0`` to ``J4`` jump
-* ``A0L0`` to ``A0L4`` directional landings
+
+Landings use a separate state-specific naming pattern:
+``S_A_HUMAN.H_A_A0L0`` through ``S_A_HUMAN.H_A_A0L4``. The engine does not
+append ``A0L0`` to a hold-style prefix.
 
 Special states such as ladder, dive, wounded, death, fire or chem or electric
 damage, hostage sequences, and mission cinematics can force specific
@@ -40,5 +43,8 @@ damage, hostage sequences, and mission cinematics can force specific
 The notes below combine the inventory naming from the animation catalog with
 explicit references found in the local OpenW3D source tree when a clip is
 named in code.
+
+Source review: `HumanStateClass naming and landing selection <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Combat/humanstate.cpp>`_
+and `HumanAnimControlClass skeleton remapping <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Combat/animcontrol.cpp>`_.
 
 .. include:: generated/a-skeleton-gallery.rst

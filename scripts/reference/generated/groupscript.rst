@@ -2,7 +2,7 @@ GroupScript.cpp
 ===============
 
 * Category: ``misc``
-* Active scripts: ``1``
+* Indexed registrations: ``1``
 * Source: ``Code/Scripts/GroupScript.cpp``
 
 MXX_Group_Member_DEL

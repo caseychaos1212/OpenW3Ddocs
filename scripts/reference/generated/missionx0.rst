@@ -2,7 +2,7 @@ MissionX0.cpp
 =============
 
 * Category: ``mission``
-* Active scripts: ``32``
+* Indexed registrations: ``31``
 * Source: ``Code/Scripts/MissionX0.cpp``
 
 DAK_MX0_Sec_3_Humvee
@@ -32,7 +32,7 @@ MX0_A03_CONTROLLER_DAK
 
 MX0_A03_CONTROLLER_DAK in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``1777``
+* Source line: ``1774``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Create_Object``, ``Get_Position``, ``Attach_Script``, ``Set_Facing``, ``Action_Reset``, ``Action_Goto``
@@ -43,7 +43,7 @@ MX0_A03_END_ZONE
 
 MX0_A03_END_ZONE in MissionX0.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events.
 
-* Source line: ``2625``
+* Source line: ``2621``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``
@@ -54,7 +54,7 @@ MX0_A03_FIRST_PLAYER_ZONE
 
 MX0_A03_FIRST_PLAYER_ZONE in MissionX0.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; drives AI action commands; sends custom events; creates or destroys objects.
 
-* Source line: ``2544``
+* Source line: ``2540``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Action_Reset``, ``Create_Object``, ``Get_Position``, ``Attach_Script``
@@ -63,12 +63,12 @@ MX0_A03_FIRST_PLAYER_ZONE in MissionX0.cpp initializes behavior when the object 
 MX0_A03_GDI_INFANTRY
 --------------------
 
-MX0_A03_GDI_INFANTRY in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events; changes innate AI behavior.
+MX0_A03_GDI_INFANTRY in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events.
 
-* Source line: ``1613``
+* Source line: ``1610``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Innate_Disable``, ``Attach_Script``, ``Action_Reset``, ``Find_Object``, ``Action_Goto``, ``Set_Innate_Is_Stationary``, ``Send_Custom_Event``, ``Action_Attack``
+* Key engine calls: ``Attach_Script``, ``Action_Reset``, ``Find_Object``, ``Action_Goto``, ``Set_Innate_Is_Stationary``, ``Send_Custom_Event``, ``Action_Attack``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -80,10 +80,10 @@ MX0_A03_GDI_TANK_DROP_ZONE_DAK
 
 MX0_A03_GDI_TANK_DROP_ZONE_DAK in MissionX0.cpp initializes behavior when the object is created; watches enter or exit events.
 
-* Source line: ``1747``
+* Source line: ``1744``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Debug_Message``, ``Attach_Script``
+* Key engine calls: ``Find_Object``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 MX0_A03_GDI_TROOP_DROP_ZONE_DAK
@@ -91,10 +91,10 @@ MX0_A03_GDI_TROOP_DROP_ZONE_DAK
 
 MX0_A03_GDI_TROOP_DROP_ZONE_DAK in MissionX0.cpp initializes behavior when the object is created; watches enter or exit events.
 
-* Source line: ``1718``
+* Source line: ``1715``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Debug_Message``, ``Attach_Script``
+* Key engine calls: ``Find_Object``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 MX0_A03_GDI_TROOPER_ONE
@@ -102,10 +102,10 @@ MX0_A03_GDI_TROOPER_ONE
 
 MX0_A03_GDI_TROOPER_ONE in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events; changes innate AI behavior; starts conversations.
 
-* Source line: ``2422``
+* Source line: ``2418``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Attach_Script``, ``Innate_Disable``, ``Set_Innate_Is_Stationary``, ``Innate_Enable``, ``Action_Reset``, ``Action_Goto``, ``Debug_Message``, ``Create_Conversation``
+* Key engine calls: ``Attach_Script``, ``Innate_Disable``, ``Set_Innate_Is_Stationary``, ``Innate_Enable``, ``Action_Reset``, ``Action_Goto``, ``Create_Conversation``, ``Join_Conversation``
 * Summary source: ``heuristic``
 
 MX0_A03_HAVOC_TANK
@@ -113,10 +113,10 @@ MX0_A03_HAVOC_TANK
 
 MX0_A03_HAVOC_TANK in MissionX0.cpp responds to custom events; sends custom events.
 
-* Source line: ``2517``
+* Source line: ``2513``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Debug_Message``, ``Send_Custom_Event``
+* Key engine calls: ``Find_Object``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 MX0_A03_HUMVEE
@@ -124,10 +124,10 @@ MX0_A03_HUMVEE
 
 MX0_A03_HUMVEE in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events; changes innate AI behavior; starts conversations.
 
-* Source line: ``2090``
+* Source line: ``2086``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Attach_Script``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Action_Goto``, ``Debug_Message``, ``Find_Object``, ``Action_Attack``
+* Key engine calls: ``Attach_Script``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Action_Goto``, ``Find_Object``, ``Action_Attack``, ``Innate_Enable``
 * Summary source: ``heuristic``
 
 MX0_A03_NOD_BUGGIE
@@ -135,7 +135,7 @@ MX0_A03_NOD_BUGGIE
 
 MX0_A03_NOD_BUGGIE in MissionX0.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; drives AI action commands; creates or destroys objects.
 
-* Source line: ``2269``
+* Source line: ``2265``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Action_Goto``, ``Get_Position``, ``Create_Object``, ``Attach_Script``
@@ -146,10 +146,10 @@ MX0_A03_NOD_HARVESTER
 
 MX0_A03_NOD_HARVESTER in MissionX0.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; drives AI action commands; sends custom events; controls animation playback.
 
-* Source line: ``2333``
+* Source line: ``2329``
 * Event hooks: ``Created``, ``Killed``, ``Damaged``, ``Custom``, ``Action_Complete``, ``Animation_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Attach_Script``, ``Set_Health``, ``Action_Goto``, ``Set_Animation``, ``Send_Custom_Event``, ``Debug_Message``, ``Get_Health``, ``Apply_Damage``
+* Key engine calls: ``Set_Health``, ``Action_Goto``, ``Set_Animation``, ``Apply_Damage``, ``Find_Object``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 MX0_A03_NOD_PLACED_MINIGUNNER
@@ -157,7 +157,7 @@ MX0_A03_NOD_PLACED_MINIGUNNER
 
 MX0_A03_NOD_PLACED_MINIGUNNER in MissionX0.cpp initializes behavior when the object is created; responds to custom events; changes innate AI behavior.
 
-* Source line: ``1389``
+* Source line: ``1386``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Position``, ``Set_Innate_Soldier_Home_Location``, ``Innate_Disable``, ``Set_Innate_Is_Stationary``, ``Innate_Enable``
@@ -168,7 +168,7 @@ MX0_A03_NOD_TROOPER_TIB_DEATH
 
 MX0_A03_NOD_TROOPER_TIB_DEATH in MissionX0.cpp responds to custom events; reacts to destruction state; sends custom events.
 
-* Source line: ``2310``
+* Source line: ``2306``
 * Event hooks: ``Killed``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``
@@ -179,7 +179,7 @@ MX0_A03_NOD_TURRET
 
 MX0_A03_NOD_TURRET in MissionX0.cpp initializes behavior when the object is created; reacts to destruction state; sends custom events.
 
-* Source line: ``2603``
+* Source line: ``2599``
 * Event hooks: ``Created``, ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``
@@ -190,7 +190,7 @@ MX0_A03_TANK
 
 MX0_A03_TANK in MissionX0.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events.
 
-* Source line: ``2210``
+* Source line: ``2206``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Attach_Script``, ``Send_Custom_Event``, ``Find_Object``, ``Action_Attack``
@@ -201,7 +201,7 @@ MX0_A03_TROOPER_ONE_TEST
 
 MX0_A03_TROOPER_ONE_TEST in MissionX0.cpp initializes behavior when the object is created.
 
-* Source line: ``2595``
+* Source line: ``2591``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Attach_Script``
@@ -294,7 +294,7 @@ MX0_GDI_ORCA
 
 MX0_GDI_ORCA in MissionX0.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``1410``
+* Source line: ``1407``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Create_Object``, ``Attach_Script``, ``Send_Custom_Event``, ``Find_Object``, ``Fade_Background_Music``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``
@@ -330,7 +330,7 @@ MX0_MissionStart_DME in MissionX0.cpp initializes behavior when the object is cr
 * Source line: ``42``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Select_Weapon``, ``Get_Position``, ``Find_Object``, ``Get_Facing``, ``Fade_Background_Music``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``
+* Key engine calls: ``Select_Weapon``, ``Get_Position``, ``Find_Object``, ``Fade_Background_Music``, ``Create_Object``, ``Attach_Script``, ``Start_Timer``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 MX0_NOD_INFANTRY
@@ -338,10 +338,10 @@ MX0_NOD_INFANTRY
 
 MX0_NOD_INFANTRY in MissionX0.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; drives AI action commands; sends custom events.
 
-* Source line: ``1522``
+* Source line: ``1519``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Action_Complete``, ``Animation_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Attach_Script``, ``Set_Innate_Is_Stationary``, ``Action_Attack``, ``Action_Reset``, ``Debug_Message``, ``Action_Goto``
+* Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Attach_Script``, ``Set_Innate_Is_Stationary``, ``Action_Attack``, ``Action_Reset``, ``Action_Goto``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -373,14 +373,3 @@ MX0_SniperAction in MissionX0.cpp initializes behavior when the object is create
 Parameter Description::
 
    FaceObj:int
-
-MX0_Triggered_Conv
-------------------
-
-MX0_Triggered_Conv in MissionX0.cpp initializes behavior when the object is created.
-
-* Source line: ``2680``
-* Event hooks: ``Created``
-* Persistence hooks: none detected
-* Key engine calls: none detected
-* Summary source: ``heuristic``

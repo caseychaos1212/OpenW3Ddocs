@@ -2,7 +2,7 @@ Toolkit_Animations.cpp
 ======================
 
 * Category: ``toolkit``
-* Active scripts: ``3``
+* Indexed registrations: ``3``
 * Source: ``Code/Scripts/Toolkit_Animations.cpp``
 
 M00_Animation_Play_Drop_Object_Attach_Script_RMV
@@ -18,8 +18,8 @@ M00_Animation_Drop_Object_Attach_Script_RMV This script plays an animation when 
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
-   Action_Priority:int, Action_ID:int, Animation:string, Drop_Frame:int, Drop_Object:string, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
+   Action_Priority:int, Action_ID:int, Animation:string, Drop_Frame:int, Drop_Object:string,
    Drop_Bone:string, Script_Name:string, Script_Params:string, Debug_Mode=0:int
 
 Source Notes::
@@ -32,12 +32,12 @@ Source Notes::
 
      Parameters:
 
-     Animation		= The animation to play.
-     Drop_Frame	= The frame at which to drop the object.
-     Drop_Object	= The object to drop.
-     Drop_Bone		= The bone from which the object is dropped.
-     Script_Name	= The name of the script to attach.
-     Script_Params	= The parameters for the attached script.
+     Animation          = The animation to play.
+     Drop_Frame = The frame at which to drop the object.
+     Drop_Object        = The object to drop.
+     Drop_Bone          = The bone from which the object is dropped.
+     Script_Name        = The name of the script to attach.
+     Script_Params      = The parameters for the attached script.
 
 M00_Animation_Play_Drop_Object_RMV
 ----------------------------------
@@ -52,8 +52,8 @@ This script plays an animation when the object it is attached to receives a cust
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=1:int, 
-   Action_Priority:int, Action_ID:int, Animation:string, Drop_Frame:int, Drop_Object:string, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=1:int,
+   Action_Priority:int, Action_ID:int, Animation:string, Drop_Frame:int, Drop_Object:string,
    Drop_Bone:string, Debug_Mode=0:int
 
 Source Notes::
@@ -64,10 +64,10 @@ Source Notes::
 
      Parameters:
 
-     Animation		= The animation to play.
-     Drop_Frame	= The frame at which an object should drop.
-     Drop_Object	= The object to drop.
-     Drop_Bone		= The bone from which to drop the object.
+     Animation          = The animation to play.
+     Drop_Frame = The frame at which an object should drop.
+     Drop_Object        = The object to drop.
+     Drop_Bone          = The bone from which to drop the object.
 
 M00_Animation_Play_RMV
 ----------------------
@@ -82,7 +82,7 @@ M00_Animation_Play_On_Activation_RMV This script plays an animation when the obj
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
    Action_Priority:int, Action_ID:int, Animation:string, Loop=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -93,5 +93,5 @@ Source Notes::
 
      Parameters:
 
-     Animation	= The animation to play.
-     Loop		= Whether the animation should loop or not. 1 for looping. 0 for not.
+     Animation  = The animation to play.
+     Loop               = Whether the animation should loop or not. 1 for looping. 0 for not.

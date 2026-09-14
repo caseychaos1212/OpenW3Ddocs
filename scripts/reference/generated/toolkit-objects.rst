@@ -2,7 +2,7 @@ Toolkit_Objects.cpp
 ===================
 
 * Category: ``toolkit``
-* Active scripts: ``13``
+* Indexed registrations: ``13``
 * Source: ``Code/Scripts/Toolkit_Objects.cpp``
 
 M00_Create_Anim_Effect_DAY
@@ -60,7 +60,7 @@ Source Notes::
 
    - new script for default Fire, Gas and Electric troop deaths.
    - Takes preset DeathType:string ("Fire", "Gas", "Electric") and plays appropriate animation
-   	and weapon FX. (1 = flailing and smoke. 2 = Elec Twiching and smoke? 3 = choking and green smoke. )
+        and weapon FX. (1 = flailing and smoke. 2 = Elec Twiching and smoke? 3 = choking and green smoke. )
 
 M00_No_Falling_Damage_DME
 -------------------------
@@ -93,7 +93,7 @@ M00_Object_Create_Attach_Script_RMV in Toolkit_Objects.cpp initializes behavior 
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Object_To_Create:string, Location:vector3, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Object_To_Create:string, Location:vector3,
    Facing=0.00:float, Debug_Mode=0:int, Script_To_Attach:string, Script_Params:string
 
 M00_Object_Create_RMV
@@ -109,7 +109,7 @@ Creates a configured object immediately or after receiving a matching custom eve
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Object_To_Create:string, Location:vector3, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Object_To_Create:string, Location:vector3,
    Facing=0.00:float, Debug_Mode=0:int
 
 Source Notes::
@@ -120,9 +120,9 @@ Source Notes::
 
      Parameters:
 
-     Object_To_Create	= The object to create.
-     Location			= Where to create the object.
-     Facing			= What facing to place the object at.
+     Object_To_Create   = The object to create.
+     Location                   = Where to create the object.
+     Facing                     = What facing to place the object at.
 
 M00_Object_Destroy_RMV
 ----------------------
@@ -152,7 +152,7 @@ M00_Object_Destroy_Self_RMV in Toolkit_Objects.cpp initializes behavior when the
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=3:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
+   Start_Now=1:int, Receive_Type=3:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
    Receive_Param_Activate:int, Debug_Mode=0:int
 
 M00_PCT_Pokable_DAK

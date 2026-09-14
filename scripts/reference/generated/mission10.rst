@@ -2,7 +2,7 @@ Mission10.cpp
 =============
 
 * Category: ``mission``
-* Active scripts: ``79``
+* Indexed registrations: ``79``
 * Source: ``Code/Scripts/Mission10.cpp``
 
 DME_Cinematic_Zone
@@ -10,7 +10,7 @@ DME_Cinematic_Zone
 
 DME_Cinematic_Zone in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; watches enter or exit events; uses timers; creates or destroys objects.
 
-* Source line: ``2886``
+* Source line: ``2885``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Facing``, ``Find_Object``, ``Get_Position``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``, ``Start_Timer``, ``Get_Random_Int``
@@ -35,7 +35,7 @@ M10_Apache in Mission10.cpp initializes behavior when the object is created; res
 * Source line: ``1342``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Vehicle_Transitions``, ``Enable_Hibernation``, ``Get_Position``, ``Action_Goto``, ``Find_Object``, ``Apply_Damage``, ``Get_Facing``, ``Get_Safe_Flight_Height``
+* Key engine calls: ``Enable_Hibernation``, ``Get_Position``, ``Action_Goto``, ``Find_Object``, ``Apply_Damage``, ``Get_Facing``, ``Get_Safe_Flight_Height``, ``Get_Health``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -97,7 +97,7 @@ Parameter Description::
 M10_Comm_Center
 ---------------
 
-M10_Comm_Center in Mission10.cpp reacts to destruction state; sends custom events; creates or destroys objects; changes inventory or weapons; starts conversations.
+M10_Comm_Center in Mission10.cpp reacts to destruction state; sends custom events; creates or destroys objects; starts conversations.
 
 * Source line: ``889``
 * Event hooks: ``Killed``, ``Action_Complete``
@@ -121,10 +121,10 @@ M10_Con_Yard_Repair
 
 M10_Con_Yard_Repair in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; uses timers; sends custom events.
 
-* Source line: ``4208``
+* Source line: ``4207``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Get_Health``, ``Send_Custom_Event``, ``Find_Object``, ``Set_Health``, ``Start_Timer``
+* Key engine calls: ``Get_Health``, ``Send_Custom_Event``, ``Find_Object``, ``Start_Timer``, ``Set_Health``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -136,7 +136,7 @@ M10_Conversation_Zone
 
 M10_Conversation_Zone in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; watches enter or exit events; uses timers; sends custom events; starts conversations.
 
-* Source line: ``3462``
+* Source line: ``3461``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``, ``Timer_Expired``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Start_Timer``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``, ``Get_Health``
@@ -184,7 +184,7 @@ M10_Flyover_Controller
 
 M10_Flyover_Controller in Mission10.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events; creates or destroys objects.
 
-* Source line: ``3371``
+* Source line: ``3370``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Get_Random``, ``Create_Object``, ``Attach_Script``
@@ -252,12 +252,12 @@ M10_Hand_Of_Nod in Mission10.cpp reacts to destruction state; sends custom event
 M10_Havoc_Script
 ----------------
 
-M10_Havoc_Script in Mission10.cpp initializes behavior when the object is created; reacts to destruction state; sends custom events; changes inventory or weapons.
+M10_Havoc_Script in Mission10.cpp initializes behavior when the object is created.
 
 * Source line: ``614``
-* Event hooks: ``Created``, ``Destroyed``
+* Event hooks: ``Created``
 * Persistence hooks: none detected
-* Key engine calls: ``Give_PowerUp``, ``Send_Custom_Event``, ``Find_Object``
+* Key engine calls: none detected
 * Summary source: ``heuristic``
 
 M10_Helipad_Destroyed
@@ -265,7 +265,7 @@ M10_Helipad_Destroyed
 
 M10_Helipad_Destroyed in Mission10.cpp reacts to destruction state; sends custom events; starts conversations.
 
-* Source line: ``3991``
+* Source line: ``3990``
 * Event hooks: ``Killed``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``
@@ -280,7 +280,7 @@ M10_Helipad_Killed
 
 M10_Helipad_Killed in Mission10.cpp reacts to destruction state; sends custom events.
 
-* Source line: ``2842``
+* Source line: ``2841``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``
@@ -289,12 +289,12 @@ M10_Helipad_Killed in Mission10.cpp reacts to destruction state; sends custom ev
 M10_Holograph_EntryZone2_DME
 ----------------------------
 
-M10_Holograph_EntryZone2_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events; creates or destroys objects.
+M10_Holograph_EntryZone2_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events.
 
-* Source line: ``4646``
+* Source line: ``4645``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
-* Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Attach_Script``, ``Destroy_Object``
+* Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 M10_Holograph_EntryZone_DME
@@ -302,7 +302,7 @@ M10_Holograph_EntryZone_DME
 
 M10_Holograph_EntryZone_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events; creates or destroys objects.
 
-* Source line: ``4599``
+* Source line: ``4598``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Random``, ``Send_Custom_Event``, ``Find_Object``, ``Create_Object_At_Bone``, ``Attach_To_Object_Bone``, ``Disable_All_Collisions``, ``Set_Facing``, ``Get_Facing``
@@ -328,7 +328,7 @@ M10_Hon_Killed
 
 M10_Hon_Killed in Mission10.cpp reacts to destruction state; sends custom events.
 
-* Source line: ``2830``
+* Source line: ``2829``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Spawner``, ``Send_Custom_Event``, ``Find_Object``
@@ -339,7 +339,7 @@ M10_HON_KillPrevention
 
 M10_HON_KillPrevention in Mission10.cpp reacts to destruction state.
 
-* Source line: ``4377``
+* Source line: ``4376``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Health``
@@ -365,7 +365,7 @@ M10_Humm_SAMIgnore
 
 M10_Humm_SAMIgnore in Mission10.cpp initializes behavior when the object is created; sends custom events.
 
-* Source line: ``4164``
+* Source line: ``4163``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Get_ID``
@@ -398,7 +398,7 @@ M10_KaneHead2_DME
 
 M10_KaneHead2_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; sends custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``4741``
+* Source line: ``4740``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Create_Conversation``, ``Join_Conversation_Facing``, ``Get_ID``, ``Start_Conversation``, ``Monitor_Conversation``, ``Debug_Message``, ``Send_Custom_Event``, ``Destroy_Object``
@@ -407,12 +407,12 @@ M10_KaneHead2_DME in Mission10.cpp initializes behavior when the object is creat
 M10_KaneHead_DME
 ----------------
 
-M10_KaneHead_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; sends custom events; creates or destroys objects; starts conversations.
+M10_KaneHead_DME in Mission10.cpp initializes behavior when the object is created; responds to custom events; creates or destroys objects; starts conversations.
 
-* Source line: ``4692``
-* Event hooks: ``Created``, ``Custom``, ``Action_Complete``
+* Source line: ``4691``
+* Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Create_Conversation``, ``Join_Conversation_Facing``, ``Get_ID``, ``Start_Conversation``, ``Monitor_Conversation``, ``Debug_Message``, ``Send_Custom_Event``
+* Key engine calls: ``Find_Object``, ``Create_Conversation``, ``Join_Conversation_Facing``, ``Get_ID``, ``Start_Conversation``, ``Monitor_Conversation``, ``Debug_Message``, ``Destroy_Object``
 * Summary source: ``heuristic``
 
 M10_Light_Tank
@@ -431,7 +431,7 @@ M10_Lv2_KeyCarrier
 
 M10_Lv2_KeyCarrier in Mission10.cpp reacts to destruction state; creates or destroys objects.
 
-* Source line: ``4589``
+* Source line: ``4588``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Position``, ``Create_Object``
@@ -490,7 +490,7 @@ M10_Mrls_Grant
 
 M10_Mrls_Grant in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; handles player poke interaction; uses timers; creates or destroys objects.
 
-* Source line: ``4052``
+* Source line: ``4051``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Has_Key``, ``Create_Logical_Sound``, ``Get_Position``, ``Find_Object``, ``Start_Timer``, ``Create_Object``, ``Attach_Script``
@@ -501,7 +501,7 @@ M10_Mrls_Waypath
 
 M10_Mrls_Waypath in Mission10.cpp initializes behavior when the object is created; drives AI action commands; sends custom events.
 
-* Source line: ``4145``
+* Source line: ``4144``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Get_ID``, ``Action_Goto``
@@ -512,7 +512,7 @@ M10_NBase_Attacked
 
 M10_NBase_Attacked in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; uses timers; starts conversations.
 
-* Source line: ``4486``
+* Source line: ``4485``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``, ``Start_Timer``
@@ -523,7 +523,7 @@ M10_NBase_Damage_Modifier
 
 M10_NBase_Damage_Modifier in Mission10.cpp initializes behavior when the object is created; responds to custom events.
 
-* Source line: ``4524``
+* Source line: ``4523``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Health``, ``Set_Health``
@@ -549,7 +549,7 @@ M10_Nod_Obelisk
 
 M10_Nod_Obelisk in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; drives AI action commands; uses timers; creates or destroys objects.
 
-* Source line: ``3235``
+* Source line: ``3234``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Disable_All_Collisions``, ``Set_Player_Type``, ``Set_Is_Rendered``, ``Enable_Enemy_Seen``, ``Action_Attack``, ``Start_Timer``, ``Destroy_Object``
@@ -558,12 +558,12 @@ M10_Nod_Obelisk in Mission10.cpp initializes behavior when the object is created
 M10_Obelisk
 -----------
 
-M10_Obelisk in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; uses timers; sends custom events.
+M10_Obelisk in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; sends custom events.
 
 * Source line: ``1042``
-* Event hooks: ``Created``, ``Killed``, ``Damaged``, ``Custom``, ``Timer_Expired``
+* Event hooks: ``Created``, ``Killed``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Get_Health``, ``Find_Object``, ``Send_Custom_Event``, ``Set_Health``, ``Start_Timer``, ``Set_Building_Power``
+* Key engine calls: ``Get_Health``, ``Find_Object``, ``Send_Custom_Event``, ``Set_Health``, ``Set_Building_Power``
 * Summary source: ``heuristic``
 
 M10_Obelisk_MCT
@@ -571,10 +571,10 @@ M10_Obelisk_MCT
 
 M10_Obelisk_MCT in Mission10.cpp initializes behavior when the object is created; responds to custom events; handles player poke interaction; sends custom events.
 
-* Source line: ``3315``
+* Source line: ``3314``
 * Event hooks: ``Created``, ``Custom``, ``Poked``
 * Persistence hooks: none detected
-* Key engine calls: ``Set_Is_Rendered``, ``Send_Custom_Event``, ``Find_Object``
+* Key engine calls: ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
 
 M10_Objective_Controller
@@ -593,7 +593,7 @@ M10_Occupied
 
 M10_Occupied in Mission10.cpp initializes behavior when the object is created; reacts to destruction state; sends custom events.
 
-* Source line: ``4177``
+* Source line: ``4176``
 * Event hooks: ``Created``, ``Killed``, ``Sound_Heard``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Get_ID``
@@ -604,7 +604,7 @@ M10_Playertype_Nod
 
 M10_Playertype_Nod in Mission10.cpp initializes behavior when the object is created.
 
-* Source line: ``3363``
+* Source line: ``3362``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Player_Type``
@@ -615,7 +615,7 @@ M10_Pokeable_Item_OnePoke
 
 M10_Pokeable_Item_OnePoke in Mission10.cpp initializes behavior when the object is created; handles player poke interaction.
 
-* Source line: ``4301``
+* Source line: ``4300``
 * Event hooks: ``Created``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_HUD_Pokable_Indicator``
@@ -652,7 +652,7 @@ M10_Radar_Scramble
 
 M10_Radar_Scramble in Mission10.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events; starts conversations.
 
-* Source line: ``4327``
+* Source line: ``4326``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Health``, ``Find_Object``, ``Send_Custom_Event``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``, ``Enable_Radar``
@@ -663,7 +663,7 @@ M10_Radar_UnScramble
 
 M10_Radar_UnScramble in Mission10.cpp watches enter or exit events.
 
-* Source line: ``4369``
+* Source line: ``4368``
 * Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Radar``
@@ -696,7 +696,7 @@ M10_Refinery_Keycard
 
 M10_Refinery_Keycard in Mission10.cpp responds to custom events; sends custom events.
 
-* Source line: ``3347``
+* Source line: ``3346``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``
@@ -748,10 +748,10 @@ M10_Sam_Killed
 
 M10_Sam_Killed in Mission10.cpp reacts to destruction state; sends custom events; updates objectives.
 
-* Source line: ``3938``
-* Event hooks: ``Killed``, ``Action_Complete``
+* Source line: ``3937``
+* Event hooks: ``Killed``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Set_Objective_Status``, ``Send_Custom_Event``
+* Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Set_Objective_Status``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -783,12 +783,12 @@ M10_Silo in Mission10.cpp reacts to destruction state; sends custom events.
 M10_Silo_Controller
 -------------------
 
-M10_Silo_Controller in Mission10.cpp initializes behavior when the object is created; responds to custom events; sends custom events; updates objectives; starts conversations.
+M10_Silo_Controller in Mission10.cpp initializes behavior when the object is created; responds to custom events; sends custom events; starts conversations.
 
 * Source line: ``996``
 * Event hooks: ``Created``, ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Set_Objective_Status``, ``Send_Custom_Event``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``
+* Key engine calls: ``Find_Object``, ``Send_Custom_Event``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``
 * Summary source: ``heuristic``
 
 M10_SoldierPoke
@@ -796,7 +796,7 @@ M10_SoldierPoke
 
 M10_SoldierPoke in Mission10.cpp initializes behavior when the object is created; handles player poke interaction; starts conversations.
 
-* Source line: ``4388``
+* Source line: ``4387``
 * Event hooks: ``Created``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Random_Int``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``
@@ -818,7 +818,7 @@ M10_Ssm_Trigger
 
 M10_Ssm_Trigger in Mission10.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``4276``
+* Source line: ``4275``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``
@@ -851,7 +851,7 @@ M10_Stealth_Attack_01
 
 M10_Stealth_Attack_01 in Mission10.cpp initializes behavior when the object is created; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``2977``
+* Source line: ``2976``
 * Event hooks: ``Created``, ``Killed``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Start_Timer``, ``Debug_Message``, ``Get_Position``, ``Find_Object``, ``Modify_Action``, ``Send_Custom_Event``, ``Get_Distance``
@@ -862,10 +862,10 @@ M10_Stealth_Attack_02
 
 M10_Stealth_Attack_02 in Mission10.cpp initializes behavior when the object is created; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``3104``
+* Source line: ``3103``
 * Event hooks: ``Created``, ``Killed``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Enemy_Seen``, ``Enable_Stealth``, ``Start_Timer``, ``Action_Attack``, ``Send_Custom_Event``, ``Find_Object``, ``Debug_Message``, ``Get_Position``
+* Key engine calls: ``Enable_Enemy_Seen``, ``Enable_Stealth``, ``Start_Timer``, ``Send_Custom_Event``, ``Find_Object``, ``Debug_Message``, ``Get_Position``, ``Modify_Action``
 * Summary source: ``heuristic``
 
 M10_Stealth_Drop
@@ -873,7 +873,7 @@ M10_Stealth_Drop
 
 M10_Stealth_Drop in Mission10.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; uses timers; sends custom events; creates or destroys objects.
 
-* Source line: ``2850``
+* Source line: ``2849``
 * Event hooks: ``Created``, ``Destroyed``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Stealth``, ``Send_Custom_Event``, ``Find_Object``, ``Start_Timer``, ``Destroy_Object``
@@ -906,7 +906,7 @@ M10_Turret_Killed
 
 M10_Turret_Killed in Mission10.cpp reacts to destruction state; sends custom events.
 
-* Source line: ``4041``
+* Source line: ``4040``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Send_Custom_Event``

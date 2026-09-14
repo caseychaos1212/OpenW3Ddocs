@@ -14,8 +14,8 @@ Overview
 --------
 
 In current OpenW3D CMake builds, ``Code/Scripts`` is compiled as a shared
-library named ``scripts``. The output name is ``scripts.dll`` in release builds
-and ``scriptsd.dll`` in debug builds.
+library named ``scripts``. On Windows, the output name is ``scripts.dll`` in
+release builds and ``scriptsd.dll`` in debug builds.
 
 The tree contains the script runtime, factory/registration helpers, reusable
 toolkit scripts, mission-specific logic, and a large set of test or prototype
@@ -127,8 +127,11 @@ Scope
 
 This page is intentionally an overview of the script system and source layout.
 The generated per-script reference lives under ``scripts/reference`` and is
-produced from active ``DECLARE_SCRIPT`` registrations in the local OpenW3D
-source tree. It combines:
+produced by scanning ``DECLARE_SCRIPT`` registrations in the local OpenW3D
+source tree. The generator filters comments and disabled code using a limited
+preprocessor model, but does not use CMake's source list or the build's full
+preprocessor configuration. An indexed registration does not guarantee that
+the script is compiled into ``scripts.dll``. It combines:
 
 * manual summaries from ``scripts/openw3d-script-overrides.json``
 * nearby source comments when they exist
@@ -140,3 +143,11 @@ The machine-readable export for future LevelEditQt integration is
 To regenerate the catalog and RST pages, run::
 
    python tools/generate_openw3d_scripts_reference.py
+
+The default source location is a sibling ``OpenW3D/Code/Scripts`` directory.
+Use ``--source-root`` for another checkout and ``--source-revision`` to record
+the reviewed commit in the catalog and reference index. For example::
+
+   python tools/generate_openw3d_scripts_reference.py --source-root ../OpenW3D/Code/Scripts --source-revision <commit-sha>
+
+Source: `Scripts/CMakeLists.txt <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Scripts/CMakeLists.txt>`_.

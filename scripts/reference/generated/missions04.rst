@@ -2,7 +2,7 @@ MissionS04.cpp
 ==============
 
 * Category: ``mission``
-* Active scripts: ``1``
+* Indexed registrations: ``1``
 * Source: ``Code/Scripts/MissionS04.cpp``
 
 MS04_Gunboat_Waypath_Movement

@@ -2,18 +2,18 @@ Test_DME.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``12``
+* Indexed registrations: ``12``
 * Source: ``Code/Scripts/Test_DME.cpp``
 
 DME_Cinematic_Test
 ------------------
 
-DME_Cinematic_Test in Test_DME.cpp initializes behavior when the object is created; sends custom events; creates or destroys objects.
+DME_Cinematic_Test in Test_DME.cpp initializes behavior when the object is created; creates or destroys objects.
 
 * Source line: ``1015``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Set_Player_Type``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``, ``Set_Model``, ``Send_Custom_Event``, ``Find_Object``
+* Key engine calls: ``Create_Object``, ``Set_Facing``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 DME_Destroy_Item
@@ -50,7 +50,7 @@ DME_Test_Paradrop in Test_DME.cpp initializes behavior when the object is create
 * Source line: ``252``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Get_Position``, ``Create_Object_At_Bone``, ``Attach_To_Object_Bone``, ``Set_Model``, ``Set_Animation``, ``Create_3D_Sound_At_Bone``, ``Start_Timer``, ``Get_Facing``
+* Key engine calls: ``Start_Timer``, ``Get_Position``, ``Get_Facing``, ``Create_Object``, ``Set_Model``, ``Set_Facing``, ``Set_Animation``, ``Create_Object_At_Bone``
 * Summary source: ``heuristic``
 
 DME_Test_Powerup

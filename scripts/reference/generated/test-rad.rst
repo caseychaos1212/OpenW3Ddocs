@@ -2,7 +2,7 @@ Test_RAD.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``11``
+* Indexed registrations: ``11``
 * Source: ``Code/Scripts/Test_RAD.cpp``
 
 M00_Test_Sound_RAD

@@ -2,7 +2,7 @@ Test_PDS.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``15``
+* Indexed registrations: ``15``
 * Source: ``Code/Scripts/Test_PDS.cpp``
 
 PDS_Generic_Test
@@ -24,7 +24,7 @@ PDS_Get_In_Vehicle_Do_Waypath in Test_PDS.cpp initializes behavior when the obje
 * Source line: ``299``
 * Event hooks: ``Created``, ``Action_Complete``
 * Persistence hooks: none detected
-* Key engine calls: ``Find_Object``, ``Get_Position``, ``Action_Movement_Goto_Location``, ``Action_Goto``, ``Action_Movement_Follow_Waypath``
+* Key engine calls: ``Find_Object``, ``Get_Position``, ``Action_Goto``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -76,7 +76,7 @@ PDS_Test_Dock in Test_PDS.cpp initializes behavior when the object is created; c
 * Source line: ``138``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Start_Timer``, ``Find_Object``, ``Enable_Engine``, ``Get_Position``, ``Action_Dock``
+* Key engine calls: ``Start_Timer``, ``Find_Object``, ``Get_Position``, ``Action_Dock``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -91,7 +91,7 @@ PDS_Test_Follow_Player in Test_PDS.cpp initializes behavior when the object is c
 * Source line: ``440``
 * Event hooks: ``Created``, ``Timer_Expired``, ``Poked``
 * Persistence hooks: none detected
-* Key engine calls: ``Start_Timer``, ``Grant_Key``, ``Innate_Disable``, ``Action_Movement_Follow_Object``, ``Get_The_Star``, ``Action_Attack``, ``Action_Goto``
+* Key engine calls: ``Start_Timer``, ``Grant_Key``, ``Innate_Disable``, ``Get_The_Star``, ``Action_Goto``
 * Summary source: ``heuristic``
 
 PDS_Test_Follow_Waypath
@@ -102,7 +102,7 @@ PDS_Test_Follow_Waypath in Test_PDS.cpp initializes behavior when the object is 
 * Source line: ``484``
 * Event hooks: ``Created``, ``Damaged``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Grant_Key``, ``Enable_Engine``, ``Get_The_Star``, ``Action_Attack``, ``Action_Movement_Follow_Waypath``, ``Modify_Action``, ``Action_Goto``, ``Start_Timer``
+* Key engine calls: ``Grant_Key``, ``Enable_Engine``, ``Get_The_Star``, ``Action_Attack``, ``Modify_Action``, ``Start_Timer``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -117,7 +117,7 @@ PDS_Test_Goto_Loc in Test_PDS.cpp initializes behavior when the object is create
 * Source line: ``395``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Start_Timer``, ``Find_Object``, ``Get_Position``, ``Action_Movement_Goto_Location``, ``Action_Goto``
+* Key engine calls: ``Start_Timer``, ``Find_Object``, ``Get_Position``, ``Action_Goto``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -138,12 +138,12 @@ PDS_Test_Goto_Player in Test_PDS.cpp initializes behavior when the object is cre
 PDS_Test_Gunboat
 ----------------
 
-PDS_Test_Gunboat in Test_PDS.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers.
+PDS_Test_Gunboat in Test_PDS.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands.
 
 * Source line: ``864``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Engine``, ``Disable_All_Collisions``, ``Start_Timer``, ``Get_Random``, ``Action_Goto``, ``Get_The_Star``, ``Get_Position``, ``Action_Attack``
+* Key engine calls: ``Enable_Engine``, ``Disable_All_Collisions``, ``Action_Goto``, ``Get_The_Star``, ``Get_Position``, ``Action_Attack``
 * Summary source: ``heuristic``
 
 PDS_Test_Harvester
@@ -154,7 +154,7 @@ PDS_Test_Harvester in Test_PDS.cpp initializes behavior when the object is creat
 * Source line: ``557``
 * Event hooks: ``Created``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Start_Timer``, ``Get_Random``, ``Find_Object``, ``Get_Position``, ``Action_Movement_Goto_Location``, ``Action_Goto``, ``Action_Movement_Backup_Goto_Location``
+* Key engine calls: ``Start_Timer``, ``Get_Random``, ``Find_Object``, ``Get_Position``, ``Action_Goto``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -180,7 +180,7 @@ PDS_Test_Modify_Attack in Test_PDS.cpp initializes behavior when the object is c
 * Source line: ``69``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Start_Timer``, ``Enable_Engine``, ``Action_Attack``, ``Get_The_Star``, ``Action_Goto``, ``Modify_Action``
+* Key engine calls: ``Start_Timer``, ``Enable_Engine``, ``Action_Attack``, ``Get_The_Star``, ``Modify_Action``
 * Summary source: ``heuristic``
 
 Parameter Description::

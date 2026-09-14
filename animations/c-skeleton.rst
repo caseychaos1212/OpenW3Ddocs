@@ -30,4 +30,6 @@ full directional landing library seen on Skeleton A.
 The notes below combine naming-pattern descriptions with explicit OpenW3D
 source references when a clip is named in code.
 
+Source review: `HumanAnimControlClass skeleton remapping <https://github.com/w3dhub/OpenW3D/blob/dbd77b71a57f19dfc2618babb6df989954f2651a/Code/Combat/animcontrol.cpp>`_.
+
 .. include:: generated/c-skeleton-gallery.rst

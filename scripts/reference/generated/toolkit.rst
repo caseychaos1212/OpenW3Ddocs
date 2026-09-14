@@ -2,7 +2,7 @@ Toolkit.cpp
 ===========
 
 * Category: ``toolkit``
-* Active scripts: ``26``
+* Indexed registrations: ``26``
 * Source: ``Code/Scripts/Toolkit.cpp``
 
 M00_5MetalBarrels_ChainRxn_Controller_JDG
@@ -18,10 +18,10 @@ The two following scripts are a controller and a script for a gerneric barrel ex
 
 Parameter Description::
 
-   Barrel01_Location:vector3, Barrel01_Type (1-8):int, Barrel01_Facing = 0:float, 
-   Barrel02_Location:vector3, Barrel02_Type (1-8):int, Barrel02_Facing = 0:float, 
-   Barrel03_Location:vector3, Barrel03_Type (1-8):int, Barrel03_Facing = 0:float, 
-   Barrel04_Location:vector3, Barrel04_Type (1-8):int, Barrel04_Facing = 0:float, 
+   Barrel01_Location:vector3, Barrel01_Type (1-8):int, Barrel01_Facing = 0:float,
+   Barrel02_Location:vector3, Barrel02_Type (1-8):int, Barrel02_Facing = 0:float,
+   Barrel03_Location:vector3, Barrel03_Type (1-8):int, Barrel03_Facing = 0:float,
+   Barrel04_Location:vector3, Barrel04_Type (1-8):int, Barrel04_Facing = 0:float,
    Barrel05_Location:vector3, Barrel05_Type (1-8):int, Barrel05_Facing = 0:float
 
 Source Notes::
@@ -155,7 +155,7 @@ M00_Damage_Modifier_DME in Toolkit.cpp initializes behavior when the object is c
 
 Parameter Description::
 
-   Damage_multiplier:float, Star_Modifier=1:int, NotStar_Modifier=1:int, Killable_By_Star=1:int, 
+   Damage_multiplier:float, Star_Modifier=1:int, NotStar_Modifier=1:int, Killable_By_Star=1:int,
    Killable_by_NotStar=1:int
 
 M00_Debug_Text_File_RMV

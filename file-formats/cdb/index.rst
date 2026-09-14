@@ -8,7 +8,7 @@ Description
 conversation systems.
 
 The default global conversation database path in LevelEdit is
-``Presets\\conv10.cdb``.
+``Presets\conv10.cdb``.
 
 References
 ----------
@@ -40,9 +40,14 @@ Conversation manager chunks
 Within the conversation manager payload:
 
 * ``CHUNKID_VARIABLES``
-  * Micro-chunks for next active/global/level conversation ids.
+
+  * Next active conversation ID, plus the next global or level conversation
+    ID according to the category being saved.
+
 * ``CHUNKID_CONVERSATION_CATEGORY``
+
   * Stores category id, then repeated ``CHUNKID_CONVERSATION`` entries.
+
 * Repeated ``CHUNKID_ACTIVE_CONVERSATION`` entries.
 
 Editor usage

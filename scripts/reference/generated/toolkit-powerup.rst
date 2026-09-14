@@ -2,7 +2,7 @@ Toolkit_Powerup.cpp
 ===================
 
 * Category: ``toolkit``
-* Active scripts: ``12``
+* Indexed registrations: ``12``
 * Source: ``Code/Scripts/Toolkit_Powerup.cpp``
 
 M00_CNC_Crate

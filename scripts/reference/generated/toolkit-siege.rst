@@ -2,7 +2,7 @@ Toolkit_Siege.cpp
 =================
 
 * Category: ``toolkit``
-* Active scripts: ``2``
+* Indexed registrations: ``2``
 * Source: ``Code/Scripts/Toolkit_Siege.cpp``
 
 M00_Siege_Actor_RAD
@@ -18,7 +18,7 @@ M00_Siege_Actor_RAD in Toolkit_Siege.cpp initializes behavior when the object is
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
+   Start_Now=1:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
    My_Group_ID=0:int, Debug_Mode=0:int
 
 M00_Siege_Zone_RAD
@@ -34,5 +34,5 @@ M00_Siege_Zone_RAD in Toolkit_Siege.cpp initializes behavior when the object is 
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
+   Start_Now=1:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
    Wander_Distance=3.0:float, My_Group_ID=0:int, Attraction_Radius=20.0:float, Debug_Mode=0:int

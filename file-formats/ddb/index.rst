@@ -8,7 +8,8 @@ Description
 LevelEdit tooling.
 
 In OpenW3D, ``.ddb`` is written/read through the shared SaveLoad framework and
-stores definition data plus preset data.
+stores definitions. LevelEdit preset databases also contain editor preset data;
+``SaveGameManager::Save_Definitions`` writes only the definition subsystem.
 
 References
 ----------
@@ -54,6 +55,7 @@ Within ``PresetMgrClass``
 
 * ``CHUNKID_PRESETS``: each preset saved under its persist factory chunk id.
 * ``CHUNKID_EMBEDDED_NODE_DATA``:
+
   * ``CHUNKID_PRESET_ID``
   * ``CHUNKID_NODE_LIST``
 
@@ -66,7 +68,7 @@ Within ``PresetMgrClass``
 Typical file locations and usage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Global editor DB: ``presets\\objects.ddb``.
-* Temp editor DB: ``Presets\\temps20.ddb``.
+* Global editor DB: ``presets\objects.ddb``.
+* Temp editor DB: ``Presets\temps20.ddb``.
 * Exported per-map DB: ``<map>.ddb``.
 * Runtime load path derives ``<map>.ddb`` from map name and loads definitions before level data.

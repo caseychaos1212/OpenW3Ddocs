@@ -39,12 +39,18 @@ Translate DB internal chunks
 ``TranslateDBClass`` writes:
 
 * ``CHUNKID_VARIABLES``
+
   * Micro-chunks:
+
     * ``VARID_VERSION_NUMBER``
     * ``VARID_LANGUAGE_ID``
+
 * ``CHUNKID_CATEGORIES``
+
   * Repeated category persist chunks.
+
 * ``CHUNKID_OBJECTS``
+
   * Repeated translation object persist chunks.
 
 Typical file path
@@ -52,4 +58,4 @@ Typical file path
 
 LevelEdit default path:
 
-* ``Always\\TranslationDB\\strings.tdb``.
+* ``Always\TranslationDB\strings.tdb``.

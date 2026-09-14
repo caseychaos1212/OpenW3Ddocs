@@ -2,7 +2,7 @@ Test_RMV.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``19``
+* Indexed registrations: ``19``
 * Source: ``Code/Scripts/Test_RMV.cpp``
 
 M00_C130_Dropoff_RMV
@@ -39,7 +39,7 @@ M00_Damaged_Warning in Test_RMV.cpp initializes behavior when the object is crea
 * Source line: ``116``
 * Event hooks: ``Created``, ``Damaged``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Get_Health``, ``Create_Sound``, ``Set_Display_Color``, ``Display_Text``, ``Start_Timer``
+* Key engine calls: ``Get_Health``, ``Create_Sound``, ``Start_Timer``
 * Summary source: ``heuristic``
 
 M00_Destroyed_Turret
@@ -232,7 +232,7 @@ RMV_Trigger_Killed in Test_RMV.cpp reacts to destruction state; sends custom eve
 * Source line: ``195``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
-* Key engine calls: ``Is_A_Star``, ``Find_Object``, ``Send_Custom_Event``
+* Key engine calls: ``Find_Object``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 Parameter Description::

@@ -2,7 +2,7 @@ Toolkit_Sounds.cpp
 ==================
 
 * Category: ``toolkit``
-* Active scripts: ``11``
+* Indexed registrations: ``11``
 * Source: ``Code/Scripts/Toolkit_Sounds.cpp``
 
 M00_BuildingStateSoundController
@@ -33,7 +33,7 @@ Building State Sound System - Plays sounds at a simple object location. Requires
 
 Parameter Description::
 
-   3,Offset_Randomness_Destroyed:vector3,Frequency_Min_Destroyed=-1:float,Frequency_Max_Destroyed:float, 
+   3,Offset_Randomness_Destroyed:vector3,Frequency_Min_Destroyed=-1:float,Frequency_Max_Destroyed:float,
    Explosion_Name:string
 
 Source Notes::
@@ -102,8 +102,8 @@ Source Notes::
 
      Parameters:
 
-     Building_ID =		Which building this script is associated with.
-     Building_Type =	A number indicating which type of building this is.
+     Building_ID =              Which building this script is associated with.
+     Building_Type =    A number indicating which type of building this is.
      Building_Facing = Which cardinal direction the building is facing.
 
      Building Type Numbers:
@@ -152,8 +152,8 @@ Plays a configured 2D sound immediately or in response to a custom event, with o
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
-   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
+   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float,
    Debug_Mode=0:int
 
 Source Notes::
@@ -164,10 +164,10 @@ Source Notes::
 
      Parameters:
 
-     Sound_Effect		= The 2D sound effect to play.
-     Play_Count		= How many times the sound should play.
-     Sound_Delay_Min	= The minimum wait before playing the sound.
-     Sound_Delay_Max	= The maximum wait before playing the sound.
+     Sound_Effect               = The 2D sound effect to play.
+     Play_Count         = How many times the sound should play.
+     Sound_Delay_Min    = The minimum wait before playing the sound.
+     Sound_Delay_Max    = The maximum wait before playing the sound.
 
 M00_Sound_Play_3D_At_Bone_RMV
 -----------------------------
@@ -182,8 +182,8 @@ Play a 3D sound one or more times, with a delay factor in between, on an object.
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Object_ID:int, 
-   Bone_Name:string, Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Object_ID:int,
+   Bone_Name:string, Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float,
    Sound_Delay_Max=0.1:float, Debug_Mode=0:int
 
 Source Notes::
@@ -194,12 +194,12 @@ Source Notes::
 
      Parameters:
 
-     Object_ID			= The ID of the object to play the sound on.
-     Bone_Name			= The bone at which to play the sound.
-     Sound_Effect		= The sound effect to play.
-     Play_Count		= The number of times to play the sound.
-     Sound_Delay_Min	= The minimum delay before playing the sound.
-     Sound_Delay_Max	= The maximum delay before playing the sound.
+     Object_ID                  = The ID of the object to play the sound on.
+     Bone_Name                  = The bone at which to play the sound.
+     Sound_Effect               = The sound effect to play.
+     Play_Count         = The number of times to play the sound.
+     Sound_Delay_Min    = The minimum delay before playing the sound.
+     Sound_Delay_Max    = The maximum delay before playing the sound.
 
 M00_Sound_Play_3D_At_Location_RMV
 ---------------------------------
@@ -214,8 +214,8 @@ Play a 3D sound one or more times, with a delay factor in between, at this locat
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
-   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
+   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float,
    Origin:vector3, Debug_Mode=0:int
 
 Source Notes::
@@ -226,11 +226,11 @@ Source Notes::
 
      Parameters:
 
-     Sound_Effect		= The sound effect to be played.
-     Play_Count		= The number of times to play the sound.
-     Sound_Delay_Min	= The minimum delay before playing the sound.
-     Sound_Delay_Max	= The maximum delay before playing the sound.
-     Origin			= The Vector3 coordinate to play the sound at.
+     Sound_Effect               = The sound effect to be played.
+     Play_Count         = The number of times to play the sound.
+     Sound_Delay_Min    = The minimum delay before playing the sound.
+     Sound_Delay_Max    = The maximum delay before playing the sound.
+     Origin                     = The Vector3 coordinate to play the sound at.
 
 M00_Sound_Play_3D_On_Object_RAD
 -------------------------------
@@ -245,8 +245,8 @@ Play a 3D sound one or more times, with a delay factor in between, on an object.
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Object_ID:int, 
-   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float, 
+   Start_Now=0:int, Receive_Type:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Object_ID:int,
+   Sound_Effect:string, Play_Count=1:int, Sound_Delay_Min=0.1:float, Sound_Delay_Max=0.1:float,
    Debug_Mode=0:int
 
 Source Notes::
@@ -257,16 +257,16 @@ Source Notes::
 
      Parameters:
 
-     Object_ID			= The ID of the object to play the sound on.
-     Sound_Effect		= The sound effect to play.
-     Play_Count		= The number of times to play this effect.
-     Sound_Delay_Min	= The minimum delay until the sound is played.
-     Sound_Delay_Max	= The maximum delay until the sound is played.
+     Object_ID                  = The ID of the object to play the sound on.
+     Sound_Effect               = The sound effect to play.
+     Play_Count         = The number of times to play this effect.
+     Sound_Delay_Min    = The minimum delay until the sound is played.
+     Sound_Delay_Max    = The maximum delay until the sound is played.
 
      Special Information:
 
-     Object_ID of 0	= Play on self.
-     Play_Count of 0	= Play an endless loop.
+     Object_ID of 0     = Play on self.
+     Play_Count of 0    = Play an endless loop.
 
 RMV_Audio_Sound_Player_Preset
 -----------------------------
@@ -311,7 +311,7 @@ RMV_Audio_Timer_Delay in Toolkit_Sounds.cpp initializes behavior when the object
 
 Parameter Description::
 
-   Target_ID:int, Custom_Type=0:int, Custom_Param=0:int, Delay_Min=0.0:float, Delay_Max=0.0:float, 
+   Target_ID:int, Custom_Type=0:int, Custom_Param=0:int, Delay_Min=0.0:float, Delay_Max=0.0:float,
    Timer_ID=0:int, Repeat=1:int, Randomize_Each_Time=1:int
 
 RMV_Sound_Play_Near_Player
@@ -327,5 +327,5 @@ RMV_Sound_Play_Near_Player in Toolkit_Sounds.cpp initializes behavior when the o
 
 Parameter Description::
 
-   Receive_Type:int, Receive_Param:int, Max_Offset:vector3, Sound_Preset:string, Frequency_Min:float, 
+   Receive_Type:int, Receive_Param:int, Max_Offset:vector3, Sound_Preset:string, Frequency_Min:float,
    Frequency_Max=0.0:float

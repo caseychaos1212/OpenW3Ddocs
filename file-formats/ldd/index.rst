@@ -78,7 +78,7 @@ Save-game naming in practice
 
 Observed names in OpenW3D code:
 
-* ``save\\autosave.sav``
-* ``save\\quicksaveA.sav``
-* ``save\\quicksaveB.sav``
-* Slot saves like ``save\\savegameNN.sav``
+* ``save\autosave.sav``
+* ``save\quicksaveA.sav``
+* ``save\quicksaveB.sav``
+* Slot saves like ``save\savegameNN.sav``

@@ -2,7 +2,7 @@ mission08.cpp
 =============
 
 * Category: ``mission``
-* Active scripts: ``114``
+* Indexed registrations: ``114``
 * Source: ``Code/Scripts/mission08.cpp``
 
 M08_Activate_Cavern_Entrance_Truck
@@ -10,7 +10,7 @@ M08_Activate_Cavern_Entrance_Truck
 
 M08_Activate_Cavern_Entrance_Truck in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``4885``
+* Source line: ``4847``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -44,7 +44,7 @@ M08_Activate_Encounter in mission08.cpp initializes behavior when the object is 
 
 Parameter Description::
 
-   Spawner_ID1=0:int, Spawner_ID2=0:int, Spawner_ID3=0:int, Spawner_ID4=0:int, Spawner_ID5=0:int, 
+   Spawner_ID1=0:int, Spawner_ID2=0:int, Spawner_ID3=0:int, Spawner_ID4=0:int, Spawner_ID5=0:int,
    Spawner_ID6=0:int
 
 M08_Activate_Excavation
@@ -52,7 +52,7 @@ M08_Activate_Excavation
 
 M08_Activate_Excavation in mission08.cpp initializes behavior when the object is created; watches enter or exit events; creates or destroys objects.
 
-* Source line: ``6100``
+* Source line: ``6042``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``
@@ -71,17 +71,17 @@ M08_Activate_Innate in mission08.cpp initializes behavior when the object is cre
 
 Parameter Description::
 
-   Unit_ID1=0:int, Unit_ID2=0:int, Unit_ID3=0:int, Unit_ID4=0:int, Unit_ID5=0:int, 
+   Unit_ID1=0:int, Unit_ID2=0:int, Unit_ID3=0:int, Unit_ID4=0:int, Unit_ID5=0:int,
 
 M08_Activate_Midtro
 -------------------
 
-M08_Activate_Midtro in mission08.cpp initializes behavior when the object is created; watches enter or exit events; creates or destroys objects; controls animation playback.
+M08_Activate_Midtro in mission08.cpp initializes behavior when the object is created; watches enter or exit events; creates or destroys objects.
 
-* Source line: ``6793``
+* Source line: ``6734``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
-* Key engine calls: ``Is_A_Star``, ``Set_Position``, ``Get_Position``, ``Find_Object``, ``Static_Anim_Phys_Goto_Last_Frame``, ``Set_Animation_Frame``, ``Create_Object``, ``Attach_Script``
+* Key engine calls: ``Is_A_Star``, ``Set_Position``, ``Get_Position``, ``Find_Object``, ``Create_Object``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 M08_Activate_Objective_802
@@ -131,10 +131,10 @@ M08_Activate_Objective_806 in mission08.cpp initializes behavior when the object
 M08_Activate_Petra_A
 --------------------
 
-M08_Activate_Petra_A in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
+M08_Activate_Petra_A in mission08.cpp watches enter or exit events; sends custom events.
 
 * Source line: ``3689``
-* Event hooks: ``Created``, ``Entered``
+* Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -142,10 +142,10 @@ M08_Activate_Petra_A in mission08.cpp initializes behavior when the object is cr
 M08_Activate_Petra_B
 --------------------
 
-M08_Activate_Petra_B in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
+M08_Activate_Petra_B in mission08.cpp watches enter or exit events; sends custom events.
 
-* Source line: ``4078``
-* Event hooks: ``Created``, ``Entered``
+* Source line: ``4068``
+* Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -155,7 +155,7 @@ M08_Activate_Petra_C
 
 M08_Activate_Petra_C in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``4456``
+* Source line: ``4441``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -188,7 +188,7 @@ M08_Activate_Sakura
 
 M08_Activate_Sakura in mission08.cpp initializes behavior when the object is created; watches enter or exit events.
 
-* Source line: ``5827``
+* Source line: ``5769``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Enable_Spawner``
@@ -210,10 +210,10 @@ M08_Apache
 
 M08_Apache in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``6437``
+* Source line: ``6379``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Vehicle_Transitions``, ``Enable_Hibernation``, ``Get_Position``, ``Action_Goto``, ``Find_Object``, ``Apply_Damage``, ``Get_Facing``, ``Get_Safe_Flight_Height``
+* Key engine calls: ``Enable_Hibernation``, ``Get_Position``, ``Action_Goto``, ``Find_Object``, ``Apply_Damage``, ``Get_Facing``, ``Get_Safe_Flight_Height``, ``Get_Health``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -225,7 +225,7 @@ M08_Apache_Controller
 
 M08_Apache_Controller in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; uses timers; sends custom events; creates or destroys objects.
 
-* Source line: ``6278``
+* Source line: ``6220``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_ID``, ``Create_Object``, ``Find_Object``, ``Attach_Script``, ``Send_Custom_Event``, ``Start_Timer``, ``Enable_Engine``
@@ -336,7 +336,7 @@ M08_Cavern_APC
 
 M08_Cavern_APC in mission08.cpp initializes behavior when the object is created; drives AI action commands.
 
-* Source line: ``5233``
+* Source line: ``5182``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Action_Goto``
@@ -351,7 +351,7 @@ M08_Cavern_Controller
 
 M08_Cavern_Controller in mission08.cpp initializes behavior when the object is created; responds to custom events.
 
-* Source line: ``5123``
+* Source line: ``5072``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Spawner``
@@ -360,10 +360,10 @@ M08_Cavern_Controller in mission08.cpp initializes behavior when the object is c
 M08_Cavern_Entrance_Truck
 -------------------------
 
-M08_Cavern_Entrance_Truck in mission08.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands.
+M08_Cavern_Entrance_Truck in mission08.cpp responds to custom events; drives AI action commands.
 
-* Source line: ``4917``
-* Event hooks: ``Created``, ``Custom``, ``Action_Complete``
+* Source line: ``4879``
+* Event hooks: ``Custom``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Action_Goto``, ``Apply_Damage``
 * Summary source: ``heuristic``
@@ -373,7 +373,7 @@ M08_Cavern_Gun_Emplacement
 
 M08_Cavern_Gun_Emplacement in mission08.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``5393``
+* Source line: ``5342``
 * Event hooks: ``Created``, ``Damaged``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Player_Type``, ``Enable_Enemy_Seen``, ``Action_Attack``, ``Start_Timer``, ``Enable_Spawner``
@@ -384,7 +384,7 @@ M08_Cavern_Tunnel_APC
 
 M08_Cavern_Tunnel_APC in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; drives AI action commands; uses timers; creates or destroys objects.
 
-* Source line: ``5262``
+* Source line: ``5211``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Get_ID``, ``Get_Position``, ``Get_Facing``, ``Create_Object``, ``Attach_Script``, ``Action_Attack``, ``Start_Timer``
@@ -406,7 +406,7 @@ M08_Custom_Activate
 
 M08_Custom_Activate in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``5201``
+* Source line: ``5150``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -421,7 +421,7 @@ M08_DataDisc_01_DLS
 
 M08_DataDisc_01_DLS in mission08.cpp responds to custom events.
 
-* Source line: ``7159``
+* Source line: ``7100``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_HUD_Help_Text``, ``Reveal_Encyclopedia_Weapon``
@@ -432,7 +432,7 @@ M08_DataDisc_02_DLS
 
 M08_DataDisc_02_DLS in mission08.cpp responds to custom events.
 
-* Source line: ``7173``
+* Source line: ``7114``
 * Event hooks: ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_HUD_Help_Text``, ``Reveal_Encyclopedia_Weapon``
@@ -456,10 +456,10 @@ Parameter Description::
 M08_Deactivate_Petra_A
 ----------------------
 
-M08_Deactivate_Petra_A in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
+M08_Deactivate_Petra_A in mission08.cpp watches enter or exit events; sends custom events.
 
-* Source line: ``3715``
-* Event hooks: ``Created``, ``Entered``
+* Source line: ``3710``
+* Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -469,7 +469,7 @@ M08_Deactivate_Petra_B
 
 M08_Deactivate_Petra_B in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``4103``
+* Source line: ``4088``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -480,7 +480,7 @@ M08_Deactivate_Petra_C
 
 M08_Deactivate_Petra_C in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``4481``
+* Source line: ``4466``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -502,7 +502,7 @@ M08_Elevator_Movement_Zone
 
 M08_Elevator_Movement_Zone in mission08.cpp watches enter or exit events; creates or destroys objects.
 
-* Source line: ``6882``
+* Source line: ``6823``
 * Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Attach_Script``, ``Create_Object``, ``Set_Is_Rendered``, ``Static_Anim_Phys_Goto_Frame``, ``Static_Anim_Phys_Goto_Last_Frame``
@@ -517,7 +517,7 @@ M08_Enable_KaneConversation
 
 M08_Enable_KaneConversation in mission08.cpp initializes behavior when the object is created; watches enter or exit events; creates or destroys objects.
 
-* Source line: ``7082``
+* Source line: ``7023``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Find_Object``, ``Create_Object_At_Bone``, ``Attach_To_Object_Bone``, ``Disable_All_Collisions``, ``Set_Facing``, ``Get_Facing``, ``Set_Loiters_Allowed``
@@ -528,7 +528,7 @@ M08_Enable_Stealth
 
 M08_Enable_Stealth in mission08.cpp initializes behavior when the object is created.
 
-* Source line: ``6950``
+* Source line: ``6891``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Stealth``
@@ -569,7 +569,7 @@ M08_Facility_APC
 
 M08_Facility_APC in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; drives AI action commands; uses timers; creates or destroys objects.
 
-* Source line: ``4507``
+* Source line: ``4492``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Get_ID``, ``Get_Position``, ``Get_Facing``, ``Create_Object``, ``Attach_Script``, ``Action_Attack``, ``Start_Timer``
@@ -610,7 +610,7 @@ M08_Facility_Scientist
 
 M08_Facility_Scientist in mission08.cpp initializes behavior when the object is created; reacts to destruction state; drives AI action commands; uses timers; starts conversations.
 
-* Source line: ``6135``
+* Source line: ``6077``
 * Event hooks: ``Created``, ``Killed``, ``Enemy_Seen``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Player_Type``, ``Find_Object``, ``Action_Goto``, ``Get_Action_ID``, ``Start_Timer``, ``Get_Position``, ``Action_Face_Location``, ``Action_Play_Animation``
@@ -623,10 +623,10 @@ Parameter Description::
 M08_Facility_Scientist_Inactive
 -------------------------------
 
-M08_Facility_Scientist_Inactive in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
+M08_Facility_Scientist_Inactive in mission08.cpp responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``4961``
-* Event hooks: ``Created``, ``Killed``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
+* Source line: ``4918``
+* Event hooks: ``Killed``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Innate_Soldier_Enable_Footsteps_Heard``, ``Find_Object``, ``Action_Goto``, ``Start_Timer``, ``Action_Play_Animation``, ``Is_A_Star``, ``Set_Innate_Is_Stationary``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
@@ -666,7 +666,7 @@ M08_Flyover_Controller
 
 M08_Flyover_Controller in mission08.cpp initializes behavior when the object is created; continues work on timer callbacks; uses timers; creates or destroys objects.
 
-* Source line: ``6054``
+* Source line: ``5996``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Start_Timer``, ``Get_Random_Int``, ``Create_Object``, ``Attach_Script``
@@ -677,7 +677,7 @@ M08_Free_Jailed_Mutants
 
 M08_Free_Jailed_Mutants in mission08.cpp initializes behavior when the object is created; handles player poke interaction; sends custom events.
 
-* Source line: ``6770``
+* Source line: ``6711``
 * Event hooks: ``Created``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_HUD_Pokable_Indicator``, ``Grant_Key``, ``Send_Custom_Event``, ``Find_Object``
@@ -688,7 +688,7 @@ M08_Free_Prisoners_Zone
 
 M08_Free_Prisoners_Zone in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
 
-* Source line: ``5644``
+* Source line: ``5593``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -755,7 +755,7 @@ M08_Immortal_Star_DLS
 
 M08_Immortal_Star_DLS in mission08.cpp initializes behavior when the object is created; responds to custom events.
 
-* Source line: ``6913``
+* Source line: ``6854``
 * Event hooks: ``Created``, ``Damaged``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Health``, ``Set_Health``
@@ -792,7 +792,7 @@ M08_KaneHead
 
 M08_KaneHead in mission08.cpp initializes behavior when the object is created; creates or destroys objects; starts conversations.
 
-* Source line: ``7119``
+* Source line: ``7060``
 * Event hooks: ``Created``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``, ``Monitor_Conversation``, ``Destroy_Object``, ``Enable_Spawner``
@@ -803,7 +803,7 @@ M08_Lower_Cavern_Buggy
 
 M08_Lower_Cavern_Buggy in mission08.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``5464``
+* Source line: ``5413``
 * Event hooks: ``Created``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Action_Goto``, ``Modify_Action``, ``Start_Timer``, ``Action_Attack``
@@ -814,7 +814,7 @@ M08_Mobile_Apache
 
 M08_Mobile_Apache in mission08.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers; creates or destroys objects.
 
-* Source line: ``6613``
+* Source line: ``6555``
 * Event hooks: ``Created``, ``Sound_Heard``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Hibernation``, ``Action_Goto``, ``Start_Timer``, ``Action_Attack``, ``Enable_Engine``, ``Destroy_Object``, ``Find_Object``, ``Get_Position``
@@ -829,7 +829,7 @@ M08_Mobile_Vehicle
 
 M08_Mobile_Vehicle in mission08.cpp initializes behavior when the object is created; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``5939``
+* Source line: ``5881``
 * Event hooks: ``Created``, ``Enemy_Seen``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Enemy_Seen``, ``Start_Timer``, ``Get_Health``, ``Debug_Message``, ``Get_Position``, ``Find_Object``, ``Modify_Action``, ``Get_Distance``
@@ -837,8 +837,8 @@ M08_Mobile_Vehicle in mission08.cpp initializes behavior when the object is crea
 
 Parameter Description::
 
-   CheckBlocked=1:int, Attack_Loc0=0:int, Attack_Loc1=0:int, Attack_Loc2=0:int, Attack_Loc3=0:int, 
-   Attack_Loc4=0:int, Attack_Loc5=0:int, Attack_Loc6=0:int, Attack_Loc7=0:int, Attack_Loc8=0:int, 
+   CheckBlocked=1:int, Attack_Loc0=0:int, Attack_Loc1=0:int, Attack_Loc2=0:int, Attack_Loc3=0:int,
+   Attack_Loc4=0:int, Attack_Loc5=0:int, Attack_Loc6=0:int, Attack_Loc7=0:int, Attack_Loc8=0:int,
    Attack_Loc9=0:int, Attack_Loc10=0:int
 
 M08_Move_Sakura
@@ -846,7 +846,7 @@ M08_Move_Sakura
 
 M08_Move_Sakura in mission08.cpp initializes behavior when the object is created; responds to custom events; watches enter or exit events; sends custom events.
 
-* Source line: ``5894``
+* Source line: ``5836``
 * Event hooks: ``Created``, ``Custom``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
@@ -859,12 +859,12 @@ Parameter Description::
 M08_Mutant_Behavior
 -------------------
 
-M08_Mutant_Behavior in mission08.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; changes innate AI behavior.
+M08_Mutant_Behavior in mission08.cpp initializes behavior when the object is created; responds to custom events.
 
-* Source line: ``6726``
+* Source line: ``6668``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
-* Key engine calls: ``Innate_Disable``, ``Action_Play_Animation``, ``Innate_Enable``, ``Action_Goto``
+* Key engine calls: ``Action_Play_Animation``
 * Summary source: ``heuristic``
 
 M08_Nod_Buggy_Dec
@@ -938,7 +938,7 @@ M08_Nod_Warden
 
 M08_Nod_Warden in mission08.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; creates or destroys objects; changes innate AI behavior.
 
-* Source line: ``5859``
+* Source line: ``5801``
 * Event hooks: ``Created``, ``Killed``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Innate_Disable``, ``Innate_Enable``, ``Set_Innate_Soldier_Home_Location``, ``Get_Position``, ``Create_Object``
@@ -960,7 +960,7 @@ M08_Observatory_Dome_Controller
 
 M08_Observatory_Dome_Controller in mission08.cpp initializes behavior when the object is created; responds to custom events.
 
-* Source line: ``4794``
+* Source line: ``4766``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Enable_Spawner``
@@ -969,10 +969,10 @@ M08_Observatory_Dome_Controller in mission08.cpp initializes behavior when the o
 M08_Patrol_Inactive
 -------------------
 
-M08_Patrol_Inactive in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
+M08_Patrol_Inactive in mission08.cpp responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``4640``
-* Event hooks: ``Created``, ``Killed``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
+* Source line: ``4625``
+* Event hooks: ``Killed``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Action_Goto``, ``Start_Timer``, ``Innate_Soldier_Enable_Footsteps_Heard``, ``Set_Innate_Soldier_Home_Location``, ``Set_Innate_Is_Stationary``, ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -1027,7 +1027,7 @@ M08_Petra_B_Controller
 
 M08_Petra_B_Controller in mission08.cpp initializes behavior when the object is created; responds to custom events; sends custom events; creates or destroys objects.
 
-* Source line: ``3743``
+* Source line: ``3733``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Create_Logical_Sound``, ``Find_Object``, ``Create_Object``, ``Set_Facing``, ``Get_ID``, ``Get_Facing``, ``Get_Position``
@@ -1038,7 +1038,7 @@ M08_Petra_B_Helo
 
 M08_Petra_B_Helo in mission08.cpp initializes behavior when the object is created; reacts to destruction state; sends custom events.
 
-* Source line: ``4055``
+* Source line: ``4045``
 * Event hooks: ``Created``, ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``
@@ -1053,7 +1053,7 @@ M08_Petra_B_Unit
 
 M08_Petra_B_Unit in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``3958``
+* Source line: ``3948``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Sound_Heard``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Action_Goto``, ``Start_Timer``, ``Action_Reset``, ``Get_ID``, ``Apply_Damage``
@@ -1068,7 +1068,7 @@ M08_Petra_C_Controller
 
 M08_Petra_C_Controller in mission08.cpp initializes behavior when the object is created; responds to custom events; sends custom events; creates or destroys objects.
 
-* Source line: ``4131``
+* Source line: ``4116``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Create_Logical_Sound``, ``Find_Object``, ``Get_Facing``, ``Create_Object``, ``Get_Position``, ``Set_Facing``, ``Attach_Script``
@@ -1079,7 +1079,7 @@ M08_Petra_C_Helo
 
 M08_Petra_C_Helo in mission08.cpp initializes behavior when the object is created; reacts to destruction state; sends custom events.
 
-* Source line: ``4433``
+* Source line: ``4418``
 * Event hooks: ``Created``, ``Killed``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``
@@ -1094,7 +1094,7 @@ M08_Petra_C_Unit
 
 M08_Petra_C_Unit in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events.
 
-* Source line: ``4336``
+* Source line: ``4321``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Sound_Heard``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Send_Custom_Event``, ``Find_Object``, ``Action_Goto``, ``Start_Timer``, ``Action_Reset``, ``Get_ID``, ``Apply_Damage``
@@ -1238,7 +1238,7 @@ M08_Prisoner_Conversation
 
 M08_Prisoner_Conversation in mission08.cpp initializes behavior when the object is created; watches enter or exit events; starts conversations.
 
-* Source line: ``6831``
+* Source line: ``6772``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Find_Object``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``
@@ -1253,7 +1253,7 @@ M08_Prisoner_Poke_Conversation
 
 M08_Prisoner_Poke_Conversation in mission08.cpp initializes behavior when the object is created; handles player poke interaction; starts conversations.
 
-* Source line: ``7003``
+* Source line: ``6944``
 * Event hooks: ``Created``, ``Action_Complete``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_Random_Int``, ``Get_Preset_Name``, ``Create_Conversation``, ``Join_Conversation``, ``Start_Conversation``
@@ -1284,10 +1284,10 @@ M08_Reinforcement_Prisoner in mission08.cpp initializes behavior when the object
 M08_Reinforcements_Active
 -------------------------
 
-M08_Reinforcements_Active in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
+M08_Reinforcements_Active in mission08.cpp watches enter or exit events; sends custom events.
 
-* Source line: ``4831``
-* Event hooks: ``Created``, ``Entered``
+* Source line: ``4803``
+* Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -1299,10 +1299,10 @@ Parameter Description::
 M08_Reinforcements_Inactive
 ---------------------------
 
-M08_Reinforcements_Inactive in mission08.cpp initializes behavior when the object is created; watches enter or exit events; sends custom events.
+M08_Reinforcements_Inactive in mission08.cpp watches enter or exit events; sends custom events.
 
-* Source line: ``4858``
-* Event hooks: ``Created``, ``Entered``
+* Source line: ``4825``
+* Event hooks: ``Entered``
 * Persistence hooks: none detected
 * Key engine calls: ``Is_A_Star``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -1336,10 +1336,10 @@ M08_Research_Station_B in mission08.cpp initializes behavior when the object is 
 M08_Sakura
 ----------
 
-M08_Sakura in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; drives AI action commands; sends custom events; creates or destroys objects.
+M08_Sakura in mission08.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands; sends custom events; creates or destroys objects.
 
-* Source line: ``5683``
-* Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``, ``Timer_Expired``
+* Source line: ``5632``
+* Event hooks: ``Created``, ``Damaged``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Get_ID``, ``Send_Custom_Event``, ``Find_Object``, ``Set_Player_Type``, ``Enable_Enemy_Seen``, ``Action_Goto``, ``Get_Max_Health``, ``Modify_Action``
 * Summary source: ``heuristic``
@@ -1347,10 +1347,10 @@ M08_Sakura in mission08.cpp initializes behavior when the object is created; res
 M08_Scientist
 -------------
 
-M08_Scientist in mission08.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; sends custom events.
+M08_Scientist in mission08.cpp responds to custom events; reacts to destruction state; sends custom events.
 
-* Source line: ``4760``
-* Event hooks: ``Created``, ``Killed``, ``Custom``
+* Source line: ``4738``
+* Event hooks: ``Killed``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Start_Random_Conversation``, ``Send_Custom_Event``, ``Find_Object``
 * Summary source: ``heuristic``
@@ -1390,7 +1390,7 @@ M08_Unarmed_Prisoner
 
 M08_Unarmed_Prisoner in mission08.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; handles player poke interaction; drives AI action commands; uses timers; changes inventory or weapons.
 
-* Source line: ``5551``
+* Source line: ``5500``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Action_Complete``, ``Timer_Expired``, ``Poked``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Player_Type``, ``Set_Innate_Is_Stationary``, ``Give_PowerUp``, ``Select_Weapon``, ``Find_Object``, ``Action_Goto``, ``Start_Timer``, ``Grant_Key``

@@ -2,7 +2,7 @@ Test_DLS.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``58``
+* Indexed registrations: ``58``
 * Source: ``Code/Scripts/Test_DLS.cpp``
 
 DLS_ActionComplete_Test
@@ -35,7 +35,7 @@ DLS_Blink in Test_DLS.cpp initializes behavior when the object is created; creat
 * Source line: ``1662``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Set_Player_Type``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``
+* Key engine calls: ``Create_Object``, ``Set_Facing``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 DLS_Camera_Test
@@ -67,23 +67,23 @@ DLS_Cargo_Plane_Test in Test_DLS.cpp creates or destroys objects.
 DLS_Cinematic_Test
 ------------------
 
-DLS_Cinematic_Test in Test_DLS.cpp initializes behavior when the object is created; sends custom events; creates or destroys objects.
+DLS_Cinematic_Test in Test_DLS.cpp initializes behavior when the object is created; creates or destroys objects.
 
 * Source line: ``1434``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Set_Player_Type``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``, ``Set_Model``, ``Send_Custom_Event``, ``Find_Object``
+* Key engine calls: ``Create_Object``, ``Set_Facing``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 DLS_Cinematic_Test2
 -------------------
 
-DLS_Cinematic_Test2 in Test_DLS.cpp initializes behavior when the object is created; sends custom events; creates or destroys objects.
+DLS_Cinematic_Test2 in Test_DLS.cpp initializes behavior when the object is created; creates or destroys objects.
 
 * Source line: ``1498``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Set_Player_Type``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``, ``Send_Custom_Event``, ``Find_Object``, ``Enable_Spawner``
+* Key engine calls: ``Create_Object``, ``Set_Facing``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 DLS_CNC_Sound
@@ -109,7 +109,7 @@ DLS_Created_Too_Early in Test_DLS.cpp initializes behavior when the object is cr
 * Source line: ``1644``
 * Event hooks: ``Created``, ``Damaged``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Hibernation``, ``Set_Player_Type``, ``Create_Object``, ``Set_Facing``, ``Attach_Script``
+* Key engine calls: ``Create_Object``, ``Set_Facing``, ``Attach_Script``
 * Summary source: ``heuristic``
 
 DLS_Drop_Unit
@@ -312,7 +312,7 @@ DLS_SpawnTest in Test_DLS.cpp initializes behavior when the object is created; w
 * Source line: ``27``
 * Event hooks: ``Created``, ``Entered``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_Spawner``, ``Is_A_Star``, ``Trigger_Spawner``
+* Key engine calls: ``Enable_Spawner``, ``Is_A_Star``
 * Summary source: ``heuristic``
 
 DLS_SSM_Test
@@ -331,7 +331,7 @@ DLS_Star_No_Fall
 
 DLS_Star_No_Fall in Test_DLS.cpp initializes behavior when the object is created; continues work on timer callbacks; uses timers.
 
-* Source line: ``3228``
+* Source line: ``3226``
 * Event hooks: ``Created``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Start_Timer``, ``Attach_Script``
@@ -583,7 +583,7 @@ MX0_Area4_Controller_DLS in Test_DLS.cpp initializes behavior when the object is
 * Source line: ``1789``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Scale_AI_Awareness``, ``Destroy_Object``, ``Find_Object``, ``Start_Timer``, ``Create_Object``, ``Get_Position``, ``Set_Facing``, ``Attach_Script``
+* Key engine calls: ``Scale_AI_Awareness``, ``Destroy_Object``, ``Find_Object``, ``Start_Timer``, ``Attach_Script``, ``Create_Object``, ``Send_Custom_Event``, ``Get_ID``
 * Summary source: ``heuristic``
 
 MX0_Area4_Zone_DLS
@@ -606,7 +606,7 @@ MX0_Explosive_Barrels_DLS
 
 MX0_Explosive_Barrels_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; reacts to destruction state; creates explosions.
 
-* Source line: ``3261``
+* Source line: ``3259``
 * Event hooks: ``Created``, ``Killed``, ``Custom``, ``Sound_Heard``
 * Persistence hooks: none detected
 * Key engine calls: ``Apply_Damage``, ``Create_Explosion``, ``Get_Position``, ``Create_Logical_Sound``
@@ -651,7 +651,7 @@ MX0_Gun_Emplacement_DLS
 
 MX0_Gun_Emplacement_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; drives AI action commands; uses timers.
 
-* Source line: ``3032``
+* Source line: ``3030``
 * Event hooks: ``Created``, ``Custom``, ``Timer_Expired``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Action_Attack``, ``Start_Timer``
@@ -666,7 +666,7 @@ MX0_Nod_Bunker_DLS
 
 MX0_Nod_Bunker_DLS in Test_DLS.cpp initializes behavior when the object is created; drives AI action commands.
 
-* Source line: ``3176``
+* Source line: ``3174``
 * Event hooks: ``Created``, ``Enemy_Seen``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Innate_Is_Stationary``, ``Action_Attack``
@@ -677,7 +677,7 @@ MX0_Nod_RocketSoldier_DLS
 
 MX0_Nod_RocketSoldier_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands.
 
-* Source line: ``3090``
+* Source line: ``3088``
 * Event hooks: ``Created``, ``Custom``, ``Enemy_Seen``, ``Action_Complete``
 * Persistence hooks: none detected
 * Key engine calls: ``Find_Object``, ``Action_Goto``, ``Action_Attack``, ``Set_Innate_Is_Stationary``
@@ -690,12 +690,12 @@ Parameter Description::
 MX0_Obelisk_Weapon_DLS
 ----------------------
 
-MX0_Obelisk_Weapon_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events; creates or destroys objects; controls animation playback; changes innate AI behavior.
+MX0_Obelisk_Weapon_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; continues work on timer callbacks; reacts to destruction state; drives AI action commands; uses timers; sends custom events; creates or destroys objects; controls animation playback.
 
 * Source line: ``2583``
 * Event hooks: ``Created``, ``Destroyed``, ``Custom``, ``Action_Complete``, ``Timer_Expired``
 * Persistence hooks: none detected
-* Key engine calls: ``Set_Player_Type``, ``Set_Is_Rendered``, ``Enable_Enemy_Seen``, ``Enable_Hibernation``, ``Innate_Enable``, ``Get_Position``, ``Create_Object``, ``Get_ID``
+* Key engine calls: ``Set_Player_Type``, ``Set_Is_Rendered``, ``Enable_Hibernation``, ``Get_Position``, ``Create_Object``, ``Get_ID``, ``Set_Animation_Frame``, ``Send_Custom_Event``
 * Summary source: ``heuristic``
 
 Parameter Description::
@@ -707,7 +707,7 @@ MX0_Plant_Ion_Beacon_DLS
 
 MX0_Plant_Ion_Beacon_DLS in Test_DLS.cpp initializes behavior when the object is created; drives AI action commands; changes inventory or weapons.
 
-* Source line: ``3205``
+* Source line: ``3203``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
 * Key engine calls: ``Give_PowerUp``, ``Select_Weapon``, ``Get_Position``, ``Action_Attack``
@@ -718,7 +718,7 @@ MX0_SAM_DLS
 
 MX0_SAM_DLS in Test_DLS.cpp initializes behavior when the object is created; responds to custom events; drives AI action commands.
 
-* Source line: ``3147``
+* Source line: ``3145``
 * Event hooks: ``Created``, ``Custom``
 * Persistence hooks: none detected
 * Key engine calls: ``Set_Innate_Is_Stationary``, ``Find_Object``, ``Action_Attack``

@@ -2,7 +2,7 @@ Toolkit_Triggers.cpp
 ====================
 
 * Category: ``toolkit``
-* Active scripts: ``12``
+* Indexed registrations: ``12``
 * Source: ``Code/Scripts/Toolkit_Triggers.cpp``
 
 M00_Trigger_State_Sequence_RAD
@@ -18,7 +18,7 @@ Custom Parameter Settings:
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type:int, Num_States=2:int, Loop_States=0:int, Send_Type:int, Target_ID:int, 
+   Start_Now=0:int, Receive_Type:int, Num_States=2:int, Loop_States=0:int, Send_Type:int, Target_ID:int,
    Min_Delay=0.0:float, Max_Delay=0.0:float, Debug_Mode=0:int
 
 Source Notes::
@@ -42,8 +42,8 @@ M00_Trigger_Timer_Expired_RAD in Toolkit_Triggers.cpp initializes behavior when 
 
 Parameter Description::
 
-   Start_Now=0:int, Receive_Type=15:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, 
-   Timer_Min=0.0:float, Timer_Max=1.0:float, Trigger_Count=0:int, Target_ID:int, Send_Type:int, 
+   Start_Now=0:int, Receive_Type=15:int, Receive_Param_On=1:int, Receive_Param_Off=0:int,
+   Timer_Min=0.0:float, Timer_Max=1.0:float, Trigger_Count=0:int, Target_ID:int, Send_Type:int,
    Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Debug_Mode=0:int
 
 M00_Trigger_When_Action_Complete_RMV
@@ -59,8 +59,8 @@ This script triggers when the unit completes any action. It is designed to respo
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=8:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Action_ID:int, 
+   Start_Now=1:int, Receive_Type=8:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Action_ID:int,
    Trigger_Count=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -72,7 +72,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count	= How many times this will trigger.
+     Trigger_Count      = How many times this will trigger.
 
 M00_Trigger_When_Animation_Complete_RMV
 ---------------------------------------
@@ -87,8 +87,8 @@ This script triggers when the unit completes an animation.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=9:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Animation_Name:string, Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, 
+   Start_Now=1:int, Receive_Type=9:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Animation_Name:string, Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float,
    Trigger_Count=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -99,8 +99,8 @@ Source Notes::
 
      Parameters:
 
-     Animation_Name	= The name of the animation that is completing.
-     Trigger_Count		= How many times this will trigger.
+     Animation_Name     = The name of the animation that is completing.
+     Trigger_Count              = How many times this will trigger.
 
 M00_Trigger_When_Created_RMV
 ----------------------------
@@ -115,7 +115,7 @@ This script triggers when the object it is attached to is created. NOTE that thi
 
 Parameter Description::
 
-   Target_ID:int, Send_Type:int, Send_Parameter:int, Min_Delay=0.0:float, Max_Delay=0.0:float, 
+   Target_ID:int, Send_Type:int, Send_Parameter:int, Min_Delay=0.0:float, Max_Delay=0.0:float,
    Debug_Mode=0:int
 
 Source Notes::
@@ -139,8 +139,8 @@ This script triggers when the unit is damaged.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=7:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int, 
+   Start_Now=1:int, Receive_Type=7:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int,
    Debug_Mode=0:int
 
 Source Notes::
@@ -151,7 +151,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count	= How many times this will trigger.
+     Trigger_Count      = How many times this will trigger.
 
 M00_Trigger_When_Destroyed_RMV
 ------------------------------
@@ -166,7 +166,7 @@ This script triggers when the object it is attached to is destroyed.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=2:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
+   Start_Now=1:int, Receive_Type=2:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
    Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Debug_Mode=0:int
 
 Source Notes::
@@ -188,8 +188,8 @@ This script triggers when an enemy is seen.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=6:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Parameter:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int, 
+   Start_Now=1:int, Receive_Type=6:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Parameter:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int,
    Debug_Mode=0:int
 
 Source Notes::
@@ -200,7 +200,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count		= How many times this trigger will fire. Enter 0 for infinite.
+     Trigger_Count              = How many times this trigger will fire. Enter 0 for infinite.
 
 M00_Trigger_When_Killed_RMV
 ---------------------------
@@ -215,7 +215,7 @@ Sends a custom event when the host object is enabled and a kill condition is rea
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=1:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
+   Start_Now=1:int, Receive_Type=1:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
    Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Debug_Mode=0:int
 
 Source Notes::
@@ -237,8 +237,8 @@ This script triggers when the zone it is attached to is entered or exited.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=5:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int, 
+   Start_Now=1:int, Receive_Type=5:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int,
    Triggerer=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -249,7 +249,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count		= How many times this trigger will fire.
+     Trigger_Count              = How many times this trigger will fire.
      Triggerer         = Who can activate this trigger.
 
      Special Information:
@@ -270,8 +270,8 @@ This script triggers when the zone it is attached to is entered.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=3:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int, 
+   Start_Now=1:int, Receive_Type=3:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int,
    Triggerer=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -282,7 +282,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count		= How many times this trigger will fire.
+     Trigger_Count              = How many times this trigger will fire.
      Triggerer         = Who can activate this trigger.
 
      Special Information:
@@ -303,8 +303,8 @@ This script triggers when the zone it is attached to is exited.
 
 Parameter Description::
 
-   Start_Now=1:int, Receive_Type=4:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int, 
-   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int, 
+   Start_Now=1:int, Receive_Type=4:int, Receive_Param_On=1:int, Receive_Param_Off=0:int, Target_ID:int,
+   Send_Type:int, Send_Param:int, Min_Delay=0.0:float, Max_Delay=0.0:float, Trigger_Count=0:int,
    Triggerer=0:int, Debug_Mode=0:int
 
 Source Notes::
@@ -315,7 +315,7 @@ Source Notes::
 
      Parameters:
 
-     Trigger_Count		= How many times this trigger will fire.
+     Trigger_Count              = How many times this trigger will fire.
      Triggerer         = Who can activate this trigger.
 
      Special Information:

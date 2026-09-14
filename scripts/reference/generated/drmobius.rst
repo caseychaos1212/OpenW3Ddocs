@@ -2,7 +2,7 @@ DrMobius.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``1``
+* Indexed registrations: ``1``
 * Source: ``Code/Scripts/DrMobius.cpp``
 
 Dr_Mobius_Script

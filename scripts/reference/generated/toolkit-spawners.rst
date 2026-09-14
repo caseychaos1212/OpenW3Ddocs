@@ -2,7 +2,7 @@ Toolkit_Spawners.cpp
 ====================
 
 * Category: ``toolkit``
-* Active scripts: ``1``
+* Indexed registrations: ``1``
 * Source: ``Code/Scripts/Toolkit_Spawners.cpp``
 
 M00_Spawner_Controller_RMV

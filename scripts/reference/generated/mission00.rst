@@ -2,7 +2,7 @@ Mission00.cpp
 =============
 
 * Category: ``mission``
-* Active scripts: ``22``
+* Indexed registrations: ``22``
 * Source: ``Code/Scripts/Mission00.cpp``
 
 MSK_Controller

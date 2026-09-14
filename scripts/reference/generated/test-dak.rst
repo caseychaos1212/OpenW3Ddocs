@@ -2,7 +2,7 @@ Test_DAK.cpp
 ============
 
 * Category: ``test-and-prototype``
-* Active scripts: ``7``
+* Indexed registrations: ``7``
 * Source: ``Code/Scripts/Test_DAK.cpp``
 
 DAK_Electric_Death_DAK
@@ -36,10 +36,10 @@ DAK_PCT_Pokable_DAK
 
 DAK_PCT_Pokable_DAK in Test_DAK.cpp initializes behavior when the object is created.
 
-* Source line: ``180``
+* Source line: ``181``
 * Event hooks: ``Created``
 * Persistence hooks: none detected
-* Key engine calls: ``Enable_HUD_Pokable_Indicator``, ``Display_Health_Bar``
+* Key engine calls: ``Enable_HUD_Pokable_Indicator``
 * Summary source: ``heuristic``
 
 DAK_PlayerSpotted
@@ -78,10 +78,10 @@ DAK_Vehicle_Regen_DAK in Test_DAK.cpp initializes behavior when the object is cr
 M00_BUILDING_EXPLODE_NO_DAMAGE_DAK
 ----------------------------------
 
-M00_BUILDING_EXPLODE_NO_DAMAGE_DAK in Test_DAK.cpp reacts to destruction state; creates explosions.
+M00_BUILDING_EXPLODE_NO_DAMAGE_DAK in Test_DAK.cpp reacts to destruction state.
 
-* Source line: ``190``
+* Source line: ``191``
 * Event hooks: ``Killed``
 * Persistence hooks: none detected
-* Key engine calls: ``Create_Explosion``, ``Shake_Camera``, ``Get_Position``
+* Key engine calls: ``Shake_Camera``, ``Get_Position``
 * Summary source: ``heuristic``
