@@ -1357,12 +1357,17 @@ Offset  Bytes       Type     Name
 
 * **ARGS1**: Argument for the second texture stage.
 
+.. _w3d-mapper-arguments:
+
 OpenW3D mapper arg keys
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 These chunks are only meaningful when the matching
 ``W3DVERTMAT_STAGE0_MAPPING_*`` or ``W3DVERTMAT_STAGE1_MAPPING_*`` flag
 selects a mapper that actually consumes args.
+
+See :doc:`/animations/animated-textures` for atlas setup, argument examples,
+playback timing, and implementation differences between engines.
 
 Example payload::
 
@@ -1445,6 +1450,8 @@ Offset  Bytes       Type     Name
 
 * **Texture Name**: Name of the Texture
 
+.. _w3d-texture-info:
+
 W3D_CHUNK_TEXTURE_INFO
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1460,9 +1467,15 @@ Offset  Bytes   Type          Name
 ======  ======  ============  ====================
 
 * **TextureFlags**: bitwise-or'd collection of `W3D_TEXTURE_FLAGS`_ values.
-* **AnimType**: bitwise-or'd collection of `W3D_TEXTURE_ANIMATION_FLAGS`_ values.
+* **AnimType**: One of the mode values in `W3D_TEXTURE_ANIMATION_FLAGS`_.
 * **FrameCount**: Number of frames (1 if not animated).
 * **FrameRate**: Frame rate, frames per second in floating point.
+
+These animation fields describe the file format. The reviewed OpenW3D
+``Load_Texture()`` implementation does not use ``AnimType``, ``FrameCount``,
+or ``FrameRate`` to animate the texture. Grid and scrolling effects are
+configured through vertex material mappers instead. See
+:doc:`/animations/animated-textures` for the implementation and sources.
 
 
 W3D_TEXTURE_FLAGS
@@ -1499,6 +1512,10 @@ Value       Name                          Description
 
 W3D_TEXTURE_ANIMATION_FLAGS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Despite this section's historical name, these are alternative animation
+modes, not independent bit flags to OR together. Their declaration alone
+does not establish runtime support.
 
 ==========  ==========================  ==============
 Value       Name                        Description

@@ -7,6 +7,8 @@ corrections, the source revisions used, and remaining gaps.
 
 ## Engine systems
 
+* [Animated textures](animations/animated-textures.rst) - grid atlases, UV scrolling,
+  playback timing, material settings, and verified derivative differences.
 * [Presets and definitions](presets/index.rst) - IDs, factories, parent copying,
   dependency collection, DDB persistence, and runtime object creation.
 
